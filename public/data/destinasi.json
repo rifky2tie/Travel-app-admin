@@ -1,0 +1,140 @@
+[
+    {
+      "id": 1,
+      "name": "Taman Mini Indonesia Indah",
+      "description": "Taman budaya yang menampilkan miniatur Indonesia dengan berbagai paviliun daerah.",
+      "location": "Jakarta",
+      "rating": 4.7,
+      "ticket_price": 25000,
+      "price": "Rp. 7,5jt",
+    "duration": "7 days for trips",
+      "media": {
+        "image_url": "https://akcdn.detik.net.id/visual/2021/04/08/wisata-tmii_169.jpeg?w=480&q=90",
+        "official_website": "https://www.tamanmini.com"
+      },
+      "features": {
+        "facilities": ["Museum", "Teater IMAX", "Kereta Gantung", "Taman Rekreasi"],
+        "tags": ["Budaya", "Edukasi", "Rekreasi"]
+      },
+      "extra_info": {
+        "id_kategori": "budaya01",
+        "popularity_rank": 5,
+        "recommended_visit": "Weekend"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ancol Dreamland",
+      "description": "Taman hiburan terbesar di Jakarta dengan berbagai wahana dan pantai.",
+      "location": "Jakarta",
+      "rating": 4.5,
+      "ticket_price": 25000,
+      "price": "Rp. 10,5jt",
+    "duration": "9 days for trips",
+      "media": {
+        "image_url": "https://www.ancol.com/blog/wp-content/uploads/2022/02/tempat-wisata-di-jakarta-hits-murah.jpg",
+        "official_website": "https://www.ancol.com"
+      },
+      "features": {
+        "facilities": ["Dunia Fantasi", "Sea World", "Atlantis Water Adventure"],
+        "tags": ["Hiburan", "Keluarga", "Wahana"]
+      },
+      "extra_info": {
+        "id_kategori": "hiburan01",
+        "popularity_rank": 6,
+        "recommended_visit": "Libur Sekolah"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Raja Ampat",
+      "description": "Kepulauan dengan keindahan bawah laut yang luar biasa, destinasi utama bagi penyelam dunia.",
+      "location": "Papua Barat",
+      "rating": 4.9,
+      "ticket_price": 500000,
+      "price": "Rp. 20,5jt",
+      "duration": "14 days for trips",
+      "media": {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQND2DSqhsw4DRSVjBZJv0wuoCf2ZHF32vo-w&s",
+        "official_website": "https://rajaampat.tourism.com"
+      },
+      "features": {
+        "facilities": ["Diving", "Snorkeling", "Resort Eksklusif"],
+        "tags": ["Alam", "Diving", "Pantai"]
+      },
+      "extra_info": {
+        "id_kategori": "alam01",
+        "popularity_rank": 1,
+        "recommended_visit": "April - Oktober"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Gunung Bromo",
+      "description": "Gunung berapi aktif yang menawarkan pemandangan matahari terbit yang menakjubkan.",
+      "location": "Jawa Timur",
+      "rating": 4.8,
+      "ticket_price": 220000,
+      "price": "Rp. 20,5jt",
+      "duration": "14 days for trips",
+      "media": {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCN2O8m8n_NYG3AOV8l5mu6o0F1sryuRN_YA&s",
+        "official_website": "https://bromo.tourism.com"
+      },
+      "features": {
+        "facilities": ["Jeep Tour", "Sunrise View", "Pendakian"],
+        "tags": ["Alam", "Petualangan", "Fotografi"]
+      },
+      "extra_info": {
+        "id_kategori": "gunung01",
+        "popularity_rank": 2,
+        "recommended_visit": "Dini Hari"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ubud Monkey Forest",
+      "description": "Hutan lindung yang menjadi rumah bagi ratusan monyet ekor panjang.",
+      "location": "Bali",
+      "rating": 4.6,
+      "ticket_price": 80000,
+      "price": "Rp. 20,5jt",
+      "duration": "14 days for trips",
+      "media": {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0BmnrhjU6xe091g1D9YlkfZcxA82EVkaK7w&s",
+        "official_website": null
+      },
+      "features": {
+        "facilities": ["Trekking", "Cagar Alam", "Pura Hindu"],
+        "tags": ["Alam", "Budaya", "Satwa"]
+      },
+      "extra_info": {
+        "id_kategori": "satwa01",
+        "popularity_rank": 7,
+        "recommended_visit": "Pagi Hari"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Danau Toba",
+      "description": "Danau vulkanik terbesar di dunia dengan keindahan alam dan budaya Batak yang unik.",
+      "location": "Sumatera Utara",
+      "rating": 4.7,
+      "ticket_price": 0,
+      "price": "Rp. 20,5jt",
+      "duration": "14 days for trips",
+      "media": {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA-884w08VoTcoMIZcr2L5hwMzo0P9lqHfLw&s",
+        "official_website": null
+      },
+      "features": {
+        "facilities": ["Pulau Samosir", "Pemandian Air Panas", "Wisata Budaya"],
+        "tags": ["Alam", "Budaya", "Relaksasi"]
+      },
+      "extra_info": {
+        "id_kategori": "danau01",
+        "popularity_rank": 4,
+        "recommended_visit": "Musim Kemarau"
+      }
+    }
+]

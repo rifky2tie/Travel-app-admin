@@ -1,0 +1,178 @@
+{
+  "chats": [
+    {
+      "id": 1,
+      "name": "Osman Farooq",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "status": "last seen recently",
+      "lastMessage": "Got it, thank you! I'll review the details and get back to you soon.",
+      "time": "Yesterday",
+      "unread": 0,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "Hello, I had an amazing time on the Venice Dreams package! Could you please help me with booking a similar trip to Rome for next spring? Thanks!",
+          "time": "10:15 AM"
+        },
+        {
+          "fromMe": true,
+          "text": "Hi Osman! We're thrilled to hear that you enjoyed the Venice Dreams package. We would be happy to assist you in booking a similar trip to Rome for next spring. Do you have specific dates in mind?",
+          "time": "10:20 AM"
+        },
+        {
+          "fromMe": false,
+          "text": "Thank you! I'm looking at the first two weeks of April. Is there a package available during that time?",
+          "time": "10:25 AM"
+        },
+        {
+          "fromMe": true,
+          "text": "Yes, we have a Rome Highlights package available from April 1 to April 14. It includes visits to historic sites, a guided tour of the Colosseum, and a day trip to Vatican City. Would you like more details?",
+          "time": "10:30 AM"
+        },
+        {
+          "fromMe": false,
+          "text": "That sounds perfect. Could you please send me the itinerary and pricing details?",
+          "time": "10:35 AM"
+        },
+        {
+          "fromMe": true,
+          "text": "Sure! I'll email you the full itinerary and pricing details for the Rome Highlights package. Please check your inbox shortly. If you have any other questions, feel free to ask.",
+          "time": "10:40 AM"
+        },
+        {
+          "fromMe": false,
+          "text": "Got it, thank you! I'll review the details and get back to you soon.",
+          "time": "10:45 AM"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lucas Murphy",
+      "avatar": "",
+      "status": "last seen recently",
+      "lastMessage": "I have some dietary restrictions and would like to know if the Parisian Romance package can accommodate them.",
+      "time": "3:45 PM",
+      "unread": 1,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "I have some dietary restrictions and would like to know if the Parisian Romance package can accommodate them.",
+          "time": "3:45 PM"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Alexandra Green",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "status": "last seen recently",
+      "lastMessage": "Our company is interested in organizing a corporate retreat with Travelie.",
+      "time": "09:15 AM",
+      "unread": 3,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "Our company is interested in organizing a corporate retreat with Travelie. Could you provide more information?",
+          "time": "09:15 AM"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "David Hernandez",
+      "avatar": "https://randomuser.me/api/portraits/men/65.jpg",
+      "status": "last seen recently",
+      "lastMessage": "I would like to upgrade my current booking for the Alpine Escape package.",
+      "time": "10:00 AM",
+      "unread": 5,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "I would like to upgrade my current booking for the Alpine Escape package.",
+          "time": "10:00 AM"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mellinda Jenkins",
+      "avatar": "",
+      "status": "last seen recently",
+      "lastMessage": "Can you provide more details on the Safari Adventure package? I'm interested.",
+      "time": "Yesterday",
+      "unread": 2,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "Can you provide more details on the Safari Adventure package? I'm interested.",
+          "time": "Yesterday"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Kalendra Umbara",
+      "avatar": "https://randomuser.me/api/portraits/women/21.jpg",
+      "status": "last seen recently",
+      "lastMessage": "Hi, I need assistance with changing my travel dates for the Tokyo Cultural Adventure.",
+      "time": "Yesterday",
+      "unread": 1,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "Hi, I need assistance with changing my travel dates for the Tokyo Cultural Adventure.",
+          "time": "Yesterday"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Global Travel Services",
+      "avatar": "",
+      "status": "last seen recently",
+      "lastMessage": "We have updated our commission rates for the upcoming quarter. Please review.",
+      "time": "2 days ago",
+      "unread": 3,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "We have updated our commission rates for the upcoming quarter. Please review.",
+          "time": "2 days ago"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Luxury Hotels Europe",
+      "avatar": "",
+      "status": "last seen recently",
+      "lastMessage": "We are pleased to announce our new partnership with Travelie. Our luxury hotel chain...",
+      "time": "09/06/28",
+      "unread": 0,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "We are pleased to announce our new partnership with Travelie. Our luxury hotel chain is now available for your clients.",
+          "time": "09/06/28"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Brandon Lubin",
+      "avatar": "",
+      "status": "last seen recently",
+      "lastMessage": "Thank you for your assistance with my recent booking.",
+      "time": "30/05/28",
+      "unread": 0,
+      "messages": [
+        {
+          "fromMe": false,
+          "text": "Thank you for your assistance with my recent booking.",
+          "time": "30/05/28"
+        }
+      ]
+    }
+  ]
+}

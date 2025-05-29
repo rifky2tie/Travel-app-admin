@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "name": "Rifky",
+    "position": "CEO",
+    "email": "rifky@gmail.com",
+    "image": "/fototim/2.png",
+    "contact": {
+      "phone": "08123456789",
+      "address": {
+        "street": "Jalan Merdeka No. 10",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Sistem Reservasi Hotel",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Investasi & Saham",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Faerana",
+    "position": "CTO",
+    "email": "Faerana@gmail.com",
+    "image": "/fototim/3.png",
+    "contact": {
+      "phone": "08343456343",
+      "address": {
+        "street": "Jalan layang No. 1",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Alfarizi",
+    "position": "Lead Developer",
+    "email": "Alfarizi@gmail.com",
+    "image": "/fototim/4.png",
+    "contact": {
+      "phone": "08234634289",
+      "address": {
+        "street": "Jalan kita No. 2",
+        "city": "Bandung",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ikki",
+    "position": "Software Engineer",
+    "email": "Ikki@gmail.com",
+    "image": "/fototim/6.png",
+    "contact": {
+      "phone": "08432156789",
+      "address": {
+        "street": "Jalan pahlawan No. 3",
+        "city": "Hanoi",
+        "country": "Vietnam"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Absensi Online",
+        "year": 2021
+      },
+      {
+        "name": "Aplikasi Analisis Data AI",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Nana",
+    "position": "Frontend Developer",
+    "email": "Nana@gmail.com",
+    "image": "",
+    "contact": {
+      "phone": "08003456789",
+      "address": {
+        "street": "Jalan Bagus No. 5",
+        "city": "Yogyakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Pinjaman Online",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nini",
+    "position": "Sales Executive",
+    "email": "Nini@gmail.com",
+    "image": "/fototim/5.png",
+    "contact": {
+      "phone": "08678456789",
+      "address": {
+        "street": "Jalan Pendidikan No. 1",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Investasi & Saham",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nunu",
+    "position": "Frontend Developer",
+    "email": "Nunu@gmail.com",
+    "image": "/fototim/10.png",
+    "contact": {
+      "phone": "08123456789",
+      "address": {
+        "street": "Jalan Merdeka No. 10",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Nene",
+    "position": "Backend Developer",
+    "email": "Nene@gmail.com",
+    "image": "/fototim/7.png",
+    "contact": {
+      "phone": "08997056789",
+      "address": {
+        "street": "Jalan Kasturi No. 7",
+        "city": "Pekanbaru",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Pengelolaan Pajak",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Nono",
+    "position": "Backend Developer",
+    "email": "Nono@gmail.com",
+    "image": "",
+    "contact": {
+      "phone": "08123489300",
+      "address": {
+        "street": "Jalan Sudirman No. 2",
+        "city": "Pekanbaru",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kevin",
+    "position": "Backend Developer",
+    "email": "Kevin@gmail.com",
+    "image": "/fototim/9.png",
+    "contact": {
+      "phone": "08123456789",
+      "address": {
+        "street": "Jalan Merdeka No. 10",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Sistem Keamanan Data Perusahaan",
+        "year": 2024
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Hanni",
+    "position": "Full Stack Developer",
+    "email": "Hanni@gmail.com",
+    "image": "/fototim/hanni pham.png",
+    "contact": {
+      "phone": "08098856789",
+      "address": {
+        "street": "Jalan pahlawan No. 3",
+        "city": "Hanoi",
+        "country": "Vietnam"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Absensi Online",
+        "year": 2021
+      },
+      {
+        "name": "Aplikasi Analisis Data AI",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Dimas",
+    "position": "Backend Developer",
+    "email": "Dimas@gmail.com",
+    "image": "",
+    "contact": {
+      "phone": "08665008789",
+      "address": {
+        "street": "Jalan Damai No. 6",
+        "city": "Johor",
+        "country": "Malaysia"
+      }
+    },
+    "projects": [
+      {
+        "name": "E-learning Platform",
+        "year": 2020
+      },
+      {
+        "name": "Marketplace Produk Digital",
+        "year": 2021
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Yoga",
+    "position": "Software Engineer",
+    "email": "Yoga@gmail.com",
+    "image": "/fototim/12.png",
+    "contact": {
+      "phone": "08232346789",
+      "address": {
+        "street": "Jalan Damai No. 15",
+        "city": "Johor",
+        "country": "Malaysia"
+      }
+    },
+    "projects": [
+      {
+        "name": "E-learning Platform",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Mobile",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Jane",
+    "position": "Software Engineer",
+    "email": "Jane@gmail.com",
+    "image": "/fototim/17.png",
+    "contact": {
+      "phone": "08990856789",
+      "address": {
+        "street": "Jalan Mangga No. 10",
+        "city": "Medan",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Dashboard Keuangan Perusahaan",
+        "year": 2022
+      },
+      {
+        "name": "Marketplace Produk Digital",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Michael",
+    "position": "Lead Developer",
+    "email": "Michael@gmail.com",
+    "image": "/fototim/13.png",
+    "contact": {
+      "phone": "08567846789",
+      "address": {
+        "street": "Jalan West No. 20",
+        "city": "West",
+        "country": "Singapura"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Booking Tiket",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Pelacakan Pengiriman",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "John",
+    "position": "UI/UX Designer",
+    "email": "John@gmail.com",
+    "image": "/fototim/jhn.png",
+    "contact": {
+      "phone": "08123456789",
+      "address": {
+        "street": "Jalan Manggis No. 23",
+        "city": "Bali",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Booking Tiket",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Pelacakan Pengiriman",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Smith",
+    "position": "Graphic Designer",
+    "email": "Smith@gmail.com",
+    "image": "/fototim/smth.png",
+    "contact": {
+      "phone": "08120022789",
+      "address": {
+        "street": "Jalan Bagis No. 3",
+        "city": "Bali",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Aplikasi Booking Tiket",
+        "year": 2020
+      },
+      {
+        "name": "Aplikasi Pelacakan Pengiriman",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Reza",
+    "position": "Office Administrator",
+    "email": "Reza@gmail.com",
+    "image": "/fototim/16.png",
+    "contact": {
+      "phone": "08993456789",
+      "address": {
+        "street": "Jalan Suka No. 5",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Dashboard Keuangan Perusahaan",
+        "year": 2022
+      },
+      {
+        "name": "Marketplace Produk Digital",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Naruto",
+    "position": "Digital Marketing Specialist",
+    "email": "Naruto@gmail.com",
+    "image": "",
+    "contact": {
+      "phone": "08770986789",
+      "address": {
+        "street": "Jalan Durian No. 7",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Dashboard Keuangan Perusahaan",
+        "year": 2022
+      },
+      {
+        "name": "Marketplace Produk Digital",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Budi",
+    "position": "HR Manager",
+    "email": "Budi@gmail.com",
+    "image": "/fototim/budi.png",
+    "contact": {
+      "phone": "08322456789",
+      "address": {
+        "street": "Jalan Merdeka No. 10",
+        "city": "Jakarta",
+        "country": "Indonesia"
+      }
+    },
+    "projects": [
+      {
+        "name": "Website Perusahaan",
+        "year": 2023
+      },
+      {
+        "name": "Aplikasi Keuangan Pribadi",
+        "year": 2024
+      }
+    ]
+  }
+]

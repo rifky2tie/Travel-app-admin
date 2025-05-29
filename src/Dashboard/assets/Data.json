@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "FaCalendarAlt",
+    "text": "Total Booking",
+    "count": 1200,
+    "change": "+2.6%",
+    "changeType": "positive"
+  },
+  {
+    "id": 2,
+    "icon": "FaUsers",
+    "text": "Total New Customers",
+    "count": 2845,
+    "change": "-1.45%",
+    "changeType": "negative"
+  },
+  {
+    "id": 3,
+    "icon": "FaDollarSign",
+    "text": "Total Earnings",
+    "count": "$12,890",
+    "change": "+3.75%",
+    "changeType": "positive"
+  }
+]

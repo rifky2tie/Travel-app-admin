@@ -1,0 +1,72 @@
+[
+  {
+    "nama": "Rifky Faerana",
+    "email": "rifky.faerana@email.com",
+    "noHP": "081234567890",
+    "foto": "https://randomuser.me/api/portraits/men/32.jpg",
+    "lokasi": "Bali Tour Guide"
+  },
+  {
+    "nama": "Siti Aisyah",
+    "email": "siti.aisyah@email.com",
+    "noHP": "082345678901",
+    "foto": "https://randomuser.me/api/portraits/women/44.jpg",
+    "lokasi": "Ancol Dreamland Tour Guide"
+  },
+  {
+    "nama": "Budi Santoso",
+    "email": "budi.santoso@email.com",
+    "noHP": "083456789012",
+    "foto": "https://randomuser.me/api/portraits/men/65.jpg",
+    "lokasi": "Gunung Bromo Tour Guide"
+  },
+  {
+    "nama": "Dewi Lestari",
+    "email": "dewi.lestari@email.com",
+    "noHP": "084567890123",
+    "foto": "https://randomuser.me/api/portraits/women/68.jpg",
+    "lokasi": "Danau Toba Tour Guide"
+  },
+  {
+    "nama": "Andi Wijaya",
+    "email": "andi.wijaya@email.com",
+    "noHP": "085678901234",
+    "foto": "https://randomuser.me/api/portraits/men/12.jpg",
+    "lokasi": "Raja Ampat Tour Guide"
+  },
+  {
+    "nama": "Maya Sari",
+    "email": "maya.sari@email.com",
+    "noHP": "086789012345",
+    "foto": "https://randomuser.me/api/portraits/women/21.jpg",
+    "lokasi": "Sydney Tour Guide"
+  },
+  {
+    "nama": "Fajar Nugroho",
+    "email": "fajar.nugroho@email.com",
+    "noHP": "087890123456",
+    "foto": "https://randomuser.me/api/portraits/men/41.jpg",
+    "lokasi": "Dubai Tour Guide"
+  },
+  {
+    "nama": "Putri Amelia",
+    "email": "putri.amelia@email.com",
+    "noHP": "088901234567",
+    "foto": "https://randomuser.me/api/portraits/women/56.jpg",
+    "lokasi": "Rome Tour Guide"
+  },
+  {
+    "nama": "Agus Salim",
+    "email": "agus.salim@email.com",
+    "noHP": "089012345678",
+    "foto": "https://randomuser.me/api/portraits/men/77.jpg",
+    "lokasi": "Bangkok Tour Guide"
+  },
+  {
+    "nama": "Lina Marlina",
+    "email": "lina.marlina@email.com",
+    "noHP": "081112223333",
+    "foto": "https://randomuser.me/api/portraits/women/80.jpg",
+    "lokasi": "New York Tour Guide"
+  }
+]

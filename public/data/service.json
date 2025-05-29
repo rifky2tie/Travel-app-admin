@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Tiket Transportasi",
+        "gambar":"/img/tiket.png",
+        "keterangan":"Membantu dalam memesan tiket pesawat dan transportasi lainnya."
+    },
+    {
+        "id": 2,
+        "title": "Paket Wisata/ Tour Guide",
+        "gambar":"/img/guide.jpeg",
+        "keterangan":"Menyediakan pemandu liburan bagi kamu yang membutuhkan."
+    },
+    {
+        "id": 3,
+        "title": "Hotel/ Penginapan",
+        "gambar":"/img/hotel.jpeg",
+        "keterangan":"Membantu dalam mencari dan memesan tiket penginapan atau hotel."
+    }
+]

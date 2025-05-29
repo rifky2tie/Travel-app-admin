@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Angelina Simple",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://i.mydramalist.com/epNPK_5c.jpg"
+    },
+    {
+      "name": "Anggi Nani",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP0Mfaz-zQmIvVtw_jD539bEYTM0Phn2z-JA&s"
+    },
+    {
+      "name": "Viola Natalie",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://i.mydramalist.com/nO2DY2_5f.jpg",
+      "highlighted": true
+    },
+    {
+      "name": "Graham Suryo J",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://i.mydramalist.com/XW4Jx_5c.jpg"
+    },
+    {
+      "name": "Robert John K.",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Zhou_Keyu_2023.jpg/1200px-Zhou_Keyu_2023.jpg"
+    },
+    {
+      "name": "Bagas G Natfi",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAWfmRrUj7tu8aJscfZoT7rg3BDUs2bu-_IQ&s"
+    }
+  ]
+  
