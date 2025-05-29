@@ -17,6 +17,7 @@ const Travelers = React.lazy(() => import("./pages/Travelers"));
 const Guides = React.lazy(() => import("./pages/Guides"));
 const Bookings = React.lazy(() => import("./pages/Bookings"));
 const Message = React.lazy(() => import("./pages/Message"));
+const Gallery = React.lazy(() => import("./pages/Gallery"));
 
 const Loginn = React.lazy(() => import("./pages/auth/Loginn"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
@@ -40,6 +41,7 @@ function App() {
           <Route path="guides" element={<Guides />} />
           <Route path="bookings" element={<Bookings />} />
           <Route path="messages" element={<Message />} />
+          <Route path="gallery" element={<Gallery />} />
           {/* <Route path="/orders" element={<Orders />} /> */}
           {/* <Route path="/Gallery" element={<Gallery />} /> */}
           {/* <Route path="/Message" element={<Message />} /> */}
