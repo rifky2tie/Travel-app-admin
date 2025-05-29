@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import "./assets/Tailwind.css";
+import "./assets/tailwind.css";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import Loading from "./components/Loading";
