@@ -1,6 +1,9 @@
 import * as FaIcons from "react-icons/fa";
 import Breadcrumb from "../components/Breadcrumb";
 import Data from "../assets/Data.json";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 import {
     LineChart,
     Line,
@@ -21,6 +24,19 @@ export default function Dashboard() {
         { day: "Sab", pengunjung: 870 },
         { day: "Min", pengunjung: 1340 },
       ];
+
+    useEffect(() => {
+        axios
+            .get("https://api.adviceslip.com/advice")
+            .then((response) => {
+                if (response.status !== 200) {
+                    setError(response.data.message)
+                    return
+                }
+                setProducts(response.data.products)
+            })
+    }, [])
+
   return (
   <div className="w-full min-h-screen p-8 bg-white">     
    <Breadcrumb title="Dashboard" breadcrumb="Dashboard">
@@ -82,6 +98,11 @@ function CardCount({ icon: Icon, text, count, change, changeType }) {
             {change}
           </span>
         </div>
+
+      <div>
+        
+      </div>
+
       </div>
     );
   }
