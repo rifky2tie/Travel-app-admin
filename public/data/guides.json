@@ -4,69 +4,339 @@
     "email": "rifky.faerana@email.com",
     "noHP": "0081234567890",
     "foto": "https://randomuser.me/api/portraits/men/32.jpg",
-    "lokasi": "Bali Tour Guide"
+    "lokasi": "Bali Tour Guide",
+    "workExperience": "8 years",
+    "experienceLevel": "Senior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in English and Indonesian",
+      "Excellent communication and storytelling",
+      "In-depth knowledge of Balinese culture",
+      "Customer service and hospitality",
+      "Navigation and safety management"
+    ],
+    "experiences": [
+      {
+        "title": "Senior Tour Guide",
+        "company": "Bali Explore Tours",
+        "date": "January 2016 - Present",
+        "desc": "Leading and managing group tours across Bali, providing engaging and informative experiences, ensuring customer satisfaction and safety.",
+        "icon": "🧑‍💼"
+      },
+      {
+        "title": "Tour Guide",
+        "company": "Bali Heritage Walks",
+        "date": "June 2013 - December 2015",
+        "desc": "Conducted guided tours focusing on Balinese history and culture, developed tour scripts, and trained new tour guides.",
+        "icon": "🎤"
+      }
+    ]
   },
   {
     "nama": "Siti Aisyah",
     "email": "siti.aisyah@email.com",
     "noHP": "082345678901",
     "foto": "https://randomuser.me/api/portraits/women/44.jpg",
-    "lokasi": "Ancol Dreamland Tour Guide"
+    "lokasi": "Ancol Dreamland Tour Guide",
+    "workExperience": "6 years",
+    "experienceLevel": "Intermediate",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in English and Indonesian",
+      "Great with children and families",
+      "Knowledge of Jakarta attractions",
+      "Customer service",
+      "Event coordination"
+    ],
+    "experiences": [
+      {
+        "title": "Tour Guide",
+        "company": "Ancol Dreamland",
+        "date": "March 2018 - Present",
+        "desc": "Guiding families and groups through Ancol Dreamland, providing fun and safe experiences.",
+        "icon": "🎡"
+      },
+      {
+        "title": "Assistant Guide",
+        "company": "Jakarta City Tours",
+        "date": "January 2016 - February 2018",
+        "desc": "Assisted senior guides and learned about Jakarta's main attractions.",
+        "icon": "🗺️"
+      }
+    ]
   },
   {
     "nama": "Budi Santoso",
     "email": "budi.santoso@email.com",
     "noHP": "083456789012",
     "foto": "https://randomuser.me/api/portraits/men/65.jpg",
-    "lokasi": "Gunung Bromo Tour Guide"
+    "lokasi": "Gunung Bromo Tour Guide",
+    "workExperience": "10 years",
+    "experienceLevel": "Senior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in Indonesian and English",
+      "Mountain safety and navigation",
+      "Storytelling and local legends",
+      "First aid certified",
+      "Customer service"
+    ],
+    "experiences": [
+      {
+        "title": "Senior Mountain Guide",
+        "company": "Bromo Adventure",
+        "date": "January 2014 - Present",
+        "desc": "Leading sunrise and hiking tours on Mount Bromo, ensuring safety and memorable experiences.",
+        "icon": "🏔️"
+      },
+      {
+        "title": "Tour Guide",
+        "company": "East Java Explorer",
+        "date": "June 2011 - December 2013",
+        "desc": "Guided groups through East Java's natural attractions.",
+        "icon": "🌄"
+      }
+    ]
   },
   {
     "nama": "Dewi Lestari",
     "email": "dewi.lestari@email.com",
     "noHP": "084567890123",
     "foto": "https://randomuser.me/api/portraits/women/68.jpg",
-    "lokasi": "Danau Toba Tour Guide"
+    "lokasi": "Danau Toba Tour Guide",
+    "workExperience": "7 years",
+    "experienceLevel": "Intermediate",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in Indonesian, English, and Batak",
+      "Cultural storytelling",
+      "Boat navigation",
+      "Hospitality",
+      "Photography"
+    ],
+    "experiences": [
+      {
+        "title": "Tour Guide",
+        "company": "Toba Lake Tours",
+        "date": "May 2017 - Present",
+        "desc": "Guiding tourists around Lake Toba and Samosir Island, sharing local culture and history.",
+        "icon": "🚤"
+      },
+      {
+        "title": "Assistant Guide",
+        "company": "Sumatra Explorer",
+        "date": "January 2015 - April 2017",
+        "desc": "Assisted in organizing and guiding group tours in North Sumatra.",
+        "icon": "🗺️"
+      }
+    ]
   },
   {
     "nama": "Andi Wijaya",
     "email": "andi.wijaya@email.com",
     "noHP": "085678901234",
     "foto": "https://randomuser.me/api/portraits/men/12.jpg",
-    "lokasi": "Raja Ampat Tour Guide"
+    "lokasi": "Raja Ampat Tour Guide",
+    "workExperience": "9 years",
+    "experienceLevel": "Senior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in Indonesian and English",
+      "Snorkeling and diving expert",
+      "Marine biology knowledge",
+      "Boat navigation",
+      "Hospitality"
+    ],
+    "experiences": [
+      {
+        "title": "Senior Tour Guide",
+        "company": "Raja Ampat Dive Tours",
+        "date": "February 2015 - Present",
+        "desc": "Leading diving and snorkeling tours, educating guests about marine life.",
+        "icon": "🤿"
+      },
+      {
+        "title": "Tour Guide",
+        "company": "Papua Adventure",
+        "date": "June 2013 - January 2015",
+        "desc": "Guided eco-tours and island hopping trips.",
+        "icon": "🏝️"
+      }
+    ]
   },
   {
     "nama": "Maya Sari",
     "email": "maya.sari@email.com",
     "noHP": "086789012345",
     "foto": "https://randomuser.me/api/portraits/women/21.jpg",
-    "lokasi": "Sydney Tour Guide"
+    "lokasi": "Sydney Tour Guide",
+    "workExperience": "5 years",
+    "experienceLevel": "Junior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in English and Indonesian",
+      "Sydney city navigation",
+      "Public speaking",
+      "Customer service",
+      "Event planning"
+    ],
+    "experiences": [
+      {
+        "title": "Tour Guide",
+        "company": "Sydney Explorer",
+        "date": "March 2019 - Present",
+        "desc": "Guiding city tours and providing information about Sydney's history and attractions.",
+        "icon": "🏙️"
+      },
+      {
+        "title": "Assistant Guide",
+        "company": "Aussie Tours",
+        "date": "January 2018 - February 2019",
+        "desc": "Assisted with group tours and logistics.",
+        "icon": "🚌"
+      }
+    ]
   },
   {
     "nama": "Fajar Nugroho",
     "email": "fajar.nugroho@email.com",
     "noHP": "087890123456",
     "foto": "https://randomuser.me/api/portraits/men/41.jpg",
-    "lokasi": "Dubai Tour Guide"
+    "lokasi": "Dubai Tour Guide",
+    "workExperience": "11 years",
+    "experienceLevel": "Senior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in English, Arabic, and Indonesian",
+      "Desert safari expert",
+      "Luxury hospitality",
+      "City navigation",
+      "Customer service"
+    ],
+    "experiences": [
+      {
+        "title": "Senior Tour Guide",
+        "company": "Dubai Desert Tours",
+        "date": "January 2013 - Present",
+        "desc": "Leading desert safaris and city tours, ensuring guest safety and satisfaction.",
+        "icon": "🏜️"
+      },
+      {
+        "title": "Tour Guide",
+        "company": "Arabian Adventures",
+        "date": "June 2011 - December 2012",
+        "desc": "Guided tourists through Dubai's main attractions.",
+        "icon": "🌆"
+      }
+    ]
   },
   {
     "nama": "Putri Amelia",
     "email": "putri.amelia@email.com",
     "noHP": "088901234567",
     "foto": "https://randomuser.me/api/portraits/women/56.jpg",
-    "lokasi": "Rome Tour Guide"
+    "lokasi": "Rome Tour Guide",
+    "workExperience": "7 years",
+    "experienceLevel": "Intermediate",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in Italian, English, and Indonesian",
+      "Roman history expert",
+      "Museum and art tours",
+      "Customer service",
+      "Storytelling"
+    ],
+    "experiences": [
+      {
+        "title": "Tour Guide",
+        "company": "Rome City Tours",
+        "date": "April 2017 - Present",
+        "desc": "Guiding historical and cultural tours in Rome.",
+        "icon": "🏛️"
+      },
+      {
+        "title": "Assistant Guide",
+        "company": "Italy Explorer",
+        "date": "January 2015 - March 2017",
+        "desc": "Assisted with group tours and translation.",
+        "icon": "🗺️"
+      }
+    ]
   },
   {
     "nama": "Agus Salim",
     "email": "agus.salim@email.com",
     "noHP": "089012345678",
     "foto": "https://randomuser.me/api/portraits/men/77.jpg",
-    "lokasi": "Bangkok Tour Guide"
+    "lokasi": "Bangkok Tour Guide",
+    "workExperience": "8 years",
+    "experienceLevel": "Intermediate",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in Thai, English, and Indonesian",
+      "Bangkok city navigation",
+      "Food and culinary tours",
+      "Customer service",
+      "Event organization"
+    ],
+    "experiences": [
+      {
+        "title": "Tour Guide",
+        "company": "Bangkok Explorer",
+        "date": "May 2016 - Present",
+        "desc": "Guiding city and culinary tours in Bangkok.",
+        "icon": "🍜"
+      },
+      {
+        "title": "Assistant Guide",
+        "company": "Thailand Tours",
+        "date": "January 2014 - April 2016",
+        "desc": "Assisted with group tours and logistics.",
+        "icon": "🚌"
+      }
+    ]
   },
   {
     "nama": "Lina Marlina",
     "email": "lina.marlina@email.com",
     "noHP": "081112223333",
     "foto": "https://randomuser.me/api/portraits/women/80.jpg",
-    "lokasi": "New York Tour Guide"
+    "lokasi": "New York Tour Guide",
+    "workExperience": "9 years",
+    "experienceLevel": "Senior",
+    "jobType": "Full Time",
+    "jobStatus": "Active",
+    "skills": [
+      "Fluent in English and Indonesian",
+      "NYC city navigation",
+      "Broadway and art tours",
+      "Customer service",
+      "Public speaking"
+    ],
+    "experiences": [
+      {
+        "title": "Senior Tour Guide",
+        "company": "NYC Explorer",
+        "date": "February 2015 - Present",
+        "desc": "Leading city and art tours in New York City.",
+        "icon": "🗽"
+      },
+      {
+        "title": "Tour Guide",
+        "company": "Big Apple Tours",
+        "date": "June 2013 - January 2015",
+        "desc": "Guided tourists through New York's main attractions.",
+        "icon": "🏙️"
+      }
+    ]
   }
 ]

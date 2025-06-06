@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Guides() {
   const [guides, setGuides] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/data/guides.json")
@@ -16,7 +18,8 @@ export default function Guides() {
         {guides.map((guide, idx) => (
           <div
             key={idx}
-            className={`flex items-center p-5 rounded-xl shadow-sm bg-white relative`}
+            onClick={() => navigate(`/Detailguides/${idx}`)}
+            className="flex items-center p-5 rounded-xl shadow-sm bg-white relative cursor-pointer hover:bg-blue-50 transition"
           >
             <img
               src={guide.foto}

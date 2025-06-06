@@ -6,7 +6,10 @@
     "duration": "6 Days / 5 Nights",
     "date": "June 25 - June 30",
     "price": "$1,500",
-    "status": "Confirmed"
+    "status": "Confirmed",
+    "title": "Venice Dreams",
+    "location": "Venice, Italy",
+    "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80"
   },
   {
     "name": "Raphael Goodman",
@@ -15,7 +18,11 @@
     "duration": "8 Days / 7 Nights",
     "date": "Jun 25 - Jul 2",
     "price": "$3,200",
-    "status": "Pending"
+    "status": "Pending",
+    "title": "Safari Adventure",
+    "location": "Serengeti, Tanzania",
+    "image": "https://img.freepik.com/premium-photo/epic-safari-adventures-visual-safari-wildlife-photography_1032986-4626.jpg"
+
   },
   {
     "name": "Ludwig Contessa",
@@ -24,7 +31,10 @@
     "duration": "7 Days / 6 Nights",
     "date": "Jun 26 - Jul 2",
     "price": "$2,100",
-    "status": "Confirmed"
+    "status": "Confirmed",
+        "title": "Alpine Escape",
+    "location": "Swiss Alps, Switzerland",
+    "image": "https://ts3.mm.bing.net/th?id=OIP.lmtDBaEIbQz-b_iLx-l3qwHaFj&pid=15.1"
   },
   {
     "name": "Armina Raul Meyes",
@@ -33,7 +43,10 @@
     "duration": "10 Days / 9 Nights",
     "date": "Jun 26 - Jul 5",
     "price": "$2,800",
-    "status": "Cancelled"
+    "status": "Cancelled",
+        "title": "Caribbean Cruise",
+    "location": "Caribbean Islands",
+    "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
   },
   {
     "name": "James Dunn",
@@ -42,7 +55,10 @@
     "duration": "5 Days / 4 Nights",
     "date": "Jun 26 - Jun 30",
     "price": "$1,200",
-    "status": "Confirmed"
+    "status": "Confirmed",
+        "title": "Parisian Romance",
+    "location": "Paris, France",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
   },
   {
     "name": "Hillary Grey",
@@ -51,7 +67,11 @@
     "duration": "7 Days / 6 Nights",
     "date": "Jun 27 - Jul 3",
     "price": "$1,800",
-    "status": "Confirmed"
+    "status": "Confirmed",
+    "title": "Tokyo Cultural Adventure",
+    "location": "Tokyo, Japan",
+    "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
+
   },
   {
     "name": "Lucas O'connor",
@@ -60,7 +80,11 @@
     "duration": "10 Days / 9 Nights",
     "date": "Jun 28 - Jul 7",
     "price": "$2,500",
-    "status": "Pending"
+    "status": "Pending",
+    "title": "Greek Island Hopping",
+    "location": "Santorini, Greece",
+    "image": "https://th.bing.com/th/id/OIP.cskP-unxa8cRn8zWYyYbiwHaE8?w=221&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
   },
   {
     "name": "Layla Linch",
@@ -69,6 +93,10 @@
     "duration": "8 Days / 7 Nights",
     "date": "Jun 29 - Jul 6",
     "price": "$1,600",
-    "status": "Confirmed"
+    "status": "Confirmed",
+    "title": "Bali Beach Escape",
+    "location": "Bali, Indonesia",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+
   }
 ]

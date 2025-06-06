@@ -18,13 +18,15 @@ const Guides = React.lazy(() => import("./pages/Guides"));
 const Bookings = React.lazy(() => import("./pages/Bookings"));
 const Message = React.lazy(() => import("./pages/Message"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
+const Detailguides = React.lazy(() => import("./pages/Detailguides"));
+const Detailgallery = React.lazy(() => import("./pages/Detailgallery"));
+const Detaildestinasi = React.lazy(() => import("./pages/Detaildestinasi"));
+const Detailbooking = React.lazy(() => import("./pages/Detailbooking"));
 
 const Loginn = React.lazy(() => import("./pages/auth/Loginn"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
-
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,6 +41,11 @@ function App() {
           <Route path="Service" element={<Service />} />
           <Route path="Travelers" element={<Travelers />} />
           <Route path="guides" element={<Guides />} />
+          <Route path="/Detailguides/:id" element={<Detailguides />} /> 
+          <Route path="/Detailgallery/:id" element={<Detailgallery />} />
+          <Route path="/Detaildestinasi/:id" element={<Detaildestinasi />} />
+          <Route path="/Detailbooking/:id" element={<Detailbooking />} />
+
           <Route path="bookings" element={<Bookings />} />
           <Route path="messages" element={<Message />} />
           <Route path="gallery" element={<Gallery />} />

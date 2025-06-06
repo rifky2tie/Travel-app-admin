@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const statusColor = {
   Confirmed: "bg-blue-100 text-blue-700",
@@ -8,6 +9,7 @@ const statusColor = {
 
 export default function Bookings() {
   const [bookings, setBookings] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/data/bookings.json")
@@ -33,7 +35,11 @@ export default function Bookings() {
           </thead>
           <tbody>
             {bookings.map((b, idx) => (
-              <tr key={idx} className="border-b last:border-b-0">
+              <tr
+                key={idx}
+                className="border-b last:border-b-0 cursor-pointer hover:bg-blue-50 transition"
+                onClick={() => navigate(`/detailbooking/${idx}`)}
+              >
                 <td className="py-3 px-4">{b.name}</td>
                 <td className="py-3 px-4">{b.bookingCode}</td>
                 <td className="py-3 px-4">{b.package}</td>

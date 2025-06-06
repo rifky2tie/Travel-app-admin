@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Gallery() {
   const [gallery, setGallery] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/data/gallery.json")
@@ -13,7 +15,11 @@ export default function Gallery() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {gallery.map((item, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow overflow-hidden flex flex-col">
+          <div
+            key={idx}
+            className="bg-white rounded-xl shadow overflow-hidden flex flex-col cursor-pointer hover:bg-blue-50 transition"
+            onClick={() => navigate(`/detailgallery/${idx}`)}
+          >
             <img
               src={item.image}
               alt={item.title}
