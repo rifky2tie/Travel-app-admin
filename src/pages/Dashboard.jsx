@@ -1,9 +1,6 @@
 import * as FaIcons from "react-icons/fa";
 import Breadcrumb from "../components/Breadcrumb";
 import Data from "../assets/Data.json";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-
 import {
   LineChart,
   Line,
@@ -16,15 +13,30 @@ import {
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
-    const Datapengunjung = [
-        { day: "Sen", pengunjung: 800 },
-        { day: "Sel", pengunjung: 967 },
-        { day: "Rab", pengunjung: 1098 },
-        { day: "Kam", pengunjung: 1200 },
-        { day: "Jum", pengunjung: 989 },
-        { day: "Sab", pengunjung: 870 },
-        { day: "Min", pengunjung: 1340 },
-      ];
+  const Datapengunjung = [
+    { day: "Sen", pengunjung: 800 },
+    { day: "Sel", pengunjung: 967 },
+    { day: "Rab", pengunjung: 1098 },
+    { day: "Kam", pengunjung: 1200 },
+    { day: "Jum", pengunjung: 989 },
+    { day: "Sab", pengunjung: 870 },
+    { day: "Min", pengunjung: 1340 },
+  ];
+
+  const [quote, setQuote] = useState("");
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => {
+        setQuote(data.slip.advice);
+      })
+      .catch(() => {
+        setError("Gagal mengambil quote inspirasi.");
+      });
+  }, []);
+
   return (
     <div className="w-full min-h-screen p-8 bg-white">
       <Breadcrumb title="Dashboard" breadcrumb="Dashboard">
@@ -86,27 +98,28 @@ export default function Dashboard() {
 }
 
 function CardCount({ icon: Icon, text, count, change, changeType }) {
-    
-    const changeColor =
-      changeType === "positive"
-        ? "text-green-600 bg-green-100"
-        : "text-red-600 bg-red-100";
-  
-    return (
-      <div className="bg-blue-50 p-4 rounded-xl flex items-center gap-4 min-w-[220px]">
-        {/* Icon besar */}
-        <div className="text-blue-500 bg-white rounded-xl p-4 text-3xl shadow-sm">
-          <Icon />
-        </div>
-  
-        {/* Text info */}
-        <div className="flex flex-col">
-          <span className="text-sm text-gray-500 font-medium">{text}</span>
-          <span className="text-2xl font-bold text-gray-800">{count}</span>
-          <span className={`mt-1 px-2 py-1 text-xs rounded-full w-fit ${changeColor}`}>
-            {change}
-          </span>
-        </div>
+  const changeColor =
+    changeType === "positive"
+      ? "text-green-600 bg-green-100"
+      : "text-red-600 bg-red-100";
+
+  return (
+    <div className="bg-blue-50 p-4 rounded-xl flex items-center gap-4 min-w-[220px]">
+      {/* Icon besar */}
+      <div className="text-blue-500 bg-white rounded-xl p-4 text-3xl shadow-sm">
+        <Icon />
       </div>
-    );
-  }
+
+      {/* Text info */}
+      <div className="flex flex-col">
+        <span className="text-sm text-gray-500 font-medium">{text}</span>
+        <span className="text-2xl font-bold text-gray-800">{count}</span>
+        <span
+          className={`mt-1 px-2 py-1 text-xs rounded-full w-fit ${changeColor}`}
+        >
+          {change}
+        </span>
+      </div>
+    </div>
+  );
+}
