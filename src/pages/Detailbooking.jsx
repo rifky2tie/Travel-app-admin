@@ -74,16 +74,6 @@ export default function Detailbooking() {
               <div className="text-xs text-gray-400 mb-1">Booking Code</div>
               <div className="font-bold text-blue-700">{booking.bookingCode}</div>
             </div>
-            <div className="bg-blue-50 rounded-xl px-5 py-3 shadow text-left">
-              <div className="text-xs text-gray-400 mb-1">Status</div>
-              <span
-                className={`px-4 py-1 rounded-full text-sm font-medium inline-block ${
-                  statusColor[booking.status] || "bg-gray-100 text-gray-600"
-                }`}
-              >
-                {booking.status}
-              </span>
-            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>

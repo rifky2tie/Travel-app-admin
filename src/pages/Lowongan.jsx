@@ -1,30 +1,31 @@
 import { useState, useEffect } from "react";
-import { feedbackAPI } from "../services/feedbackAPI";
+import { lowonganAPI } from "../services/lowonganAPI";
 import AlertBox from "../components/AlertBox";
 import GenericTable from "../components/GenericTable";
 import LoadingSpinner from "../components/LoadingSpinner";
 import EmptyState from "../components/EmptyState";
 import { AiFillDelete } from "react-icons/ai";
 
-export default function Testi() {
+export default function Lowongan() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [dataForm, setDataForm] = useState({
     nama: "",
-    testimoni: "",
+    posisi: "",
+    deskripsi: "",
   });
-  const [feedback, setFeedback] = useState([]);
+  const [lowongan, setLowongan] = useState([]);
   const [editId, setEditId] = useState(null);
 
-  const loadFeedback = async () => {
+  const loadLowongan = async () => {
     try {
       setLoading(true);
       setError("");
-      const data = await feedbackAPI.fetchFeedback();
-      setFeedback(Array.isArray(data) ? data : []);
+      const data = await lowonganAPI.fetchLowongan();
+      setLowongan(Array.isArray(data) ? data : []);
     } catch (err) {
-      setError("Gagal memuat catatan");
+      setError("Gagal memuat data");
       console.error(err);
     } finally {
       setLoading(false);
@@ -32,7 +33,7 @@ export default function Testi() {
   };
 
   useEffect(() => {
-    loadFeedback();
+    loadLowongan();
   }, []);
 
   const handleChange = (evt) => {
@@ -52,24 +53,26 @@ export default function Testi() {
       setSuccess("");
 
       if (editId) {
-        await feedbackAPI.updateFeedback(editId, {
+        await lowonganAPI.updateLowongan(editId, {
           nama: dataForm.nama,
-          testimoni: dataForm.testimoni,
+          posisi: dataForm.posisi,
+          deskripsi: dataForm.deskripsi,
         });
-        setSuccess("Catatan berhasil diperbarui!");
+        setSuccess("Data berhasil diperbarui!");
       } else {
-        await feedbackAPI.createFeedback({
+        await lowonganAPI.createLowongan({
           nama: dataForm.nama,
-          testimoni: dataForm.testimoni,
+          posisi: dataForm.posisi,
+          deskripsi: dataForm.deskripsi,
         });
-        setSuccess("Catatan berhasil ditambahkan!");
+        setSuccess("Data berhasil ditambahkan!");
       }
 
-      setDataForm({ nama: "", testimoni: "" });
+      setDataForm({ nama: "", posisi: "", deskripsi: "" });
       setEditId(null);
 
       setTimeout(() => setSuccess(""), 3000);
-      loadFeedback();
+      loadLowongan();
     } catch (err) {
       setError(`Terjadi kesalahan: ${err.message}`);
     } finally {
@@ -77,16 +80,17 @@ export default function Testi() {
     }
   };
 
-  const handleEdit = (testi) => {
-    setEditId(testi.id);
+  const handleEdit = (lowong) => {
+    setEditId(lowong.id);
     setDataForm({
-      nama: testi.nama,
-      testimoni: testi.testimoni,
+      nama: lowong.nama,
+      posisi: lowong.posisi,
+      deskripsi: lowong.deskripsi,
     });
   };
 
   const handleDelete = async (id) => {
-    const konfirmasi = confirm("Yakin ingin menghapus catatan ini?");
+    const konfirmasi = confirm("Yakin ingin menghapus data ini?");
     if (!konfirmasi) return;
 
     try {
@@ -94,9 +98,9 @@ export default function Testi() {
       setError("");
       setSuccess("");
 
-      await feedbackAPI.deleteFeedback(id);
+      await lowonganAPI.deleteLowongan(id);
 
-      loadFeedback();
+      loadLowongan();
     } catch (err) {
       setError(`Terjadi kesalahan: ${err.message}`);
     } finally {
@@ -105,55 +109,54 @@ export default function Testi() {
   };
 
   return (
-    <div
-      className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2"
-
-    >
+    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2">
       <div className="w-full max-w-3xl">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-extrabold text-blue-800 mb-2 drop-shadow">
-            Feedback App
+            Lowongan App
           </h2>
           <p className="text-blue-500 text-lg">
-            Kelola Feedback dan catatan dengan mudah dan cepat
+            Kelola Lowongan dengan mudah dan cepat
           </p>
         </div>
 
-        {/* TABLE DITARUH DI ATAS */}
         <div className="bg-white/90 rounded-3xl shadow-xl overflow-hidden border border-blue-100 mb-10">
           <div className="px-8 py-5 bg-blue-50 border-b border-blue-100">
             <h3 className="text-lg font-semibold text-blue-800">
-              Daftar Feedback ({feedback.length})
+              Daftar Lowongan ({lowongan.length})
             </h3>
           </div>
-          {loading && <LoadingSpinner text="Memuat catatan..." />}
-          {!loading && feedback.length === 0 && !error && (
-            <EmptyState text="Belum ada feedback. Tambah feedback pertama!" />
+          {loading && <LoadingSpinner text="Memuat data..." />}
+          {!loading && lowongan.length === 0 && !error && (
+            <EmptyState text="Belum ada lowongan. Tambah lowongan pertama!" />
           )}
-          {!loading && feedback.length === 0 && error && (
+          {!loading && lowongan.length === 0 && error && (
             <EmptyState text="Terjadi Kesalahan. Coba lagi nanti." />
           )}
-          {!loading && feedback.length > 0 && (
+          {!loading && lowongan.length > 0 && (
             <GenericTable
-              columns={["#", "Judul", "Deskripsi", "Delete", "Ubah"]}
-              data={feedback}
-              renderRow={(testi, index) => (
+              columns={["#", "Nama", "Posisi", "Deskripsi", "Delete", "Ubah"]}
+              data={lowongan}
+              renderRow={(lowong, index) => (
                 <>
                   <td className="px-6 py-4 font-medium text-gray-900">{index + 1}.</td>
                   <td className="px-6 py-4">
-                    <div className="font-semibold text-gray-700">{testi.nama}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-700">{testi.testimoni}</div>
+                    <div className="font-semibold text-gray-700">{lowong.nama}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <button onClick={() => handleDelete(testi.id)} disabled={loading}>
+                    <div className="text-gray-700">{lowong.posisi}</div>
+                  </td>
+                  <td className="px-6 py-4 max-w-xs">
+                    <div className="truncate text-gray-700">{lowong.deskripsi}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <button onClick={() => handleDelete(lowong.id)} disabled={loading}>
                       <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
                     </button>
                   </td>
                   <td className="px-6 py-4">
                     <button
-                      onClick={() => handleEdit(testi)}
+                      onClick={() => handleEdit(lowong)}
                       disabled={loading}
                       className="text-blue-500 hover:text-blue-700 font-medium"
                     >
@@ -171,22 +174,31 @@ export default function Testi() {
 
         <div className="bg-white/90 rounded-3xl shadow-xl p-8 border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-4">
-            {editId ? "Edit feedback" : "Tambah feedback Baru"}
+            {editId ? "Edit Lowongan" : "Tambah Lowongan Baru"}
           </h3>
           <form onSubmit={handleSubmit} className="space-y-5">
             <input
               type="text"
               name="nama"
               value={dataForm.nama}
-              placeholder="nama"
+              placeholder="Nama"
+              onChange={handleChange}
+              required
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200"
+            />
+            <input
+              type="text"
+              name="posisi"
+              value={dataForm.posisi}
+              placeholder="Posisi"
               onChange={handleChange}
               required
               className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200"
             />
             <textarea
-              name="testimoni"
-              value={dataForm.testimoni}
-              placeholder="feedback"
+              name="deskripsi"
+              value={dataForm.deskripsi}
+              placeholder="Deskripsi"
               onChange={handleChange}
               disabled={loading}
               required
@@ -207,7 +219,7 @@ export default function Testi() {
                   className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-blue-700 font-semibold rounded-xl transition-all duration-200"
                   onClick={() => {
                     setEditId(null);
-                    setDataForm({ nama: "", testimoni: "" });
+                    setDataForm({ nama: "", posisi: "", deskripsi: "" });
                   }}
                   disabled={loading}
                 >

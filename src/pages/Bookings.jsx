@@ -30,7 +30,7 @@ export default function Bookings() {
               <th className="py-3 px-4">Duration</th>
               <th className="py-3 px-4">Date</th>
               <th className="py-3 px-4">Price</th>
-              <th className="py-3 px-4 rounded-tr-2xl">Status</th>
+         
             </tr>
           </thead>
           <tbody>
@@ -47,13 +47,6 @@ export default function Bookings() {
                 <td className="py-3 px-4">{b.date}</td>
                 <td className="py-3 px-4">{b.price}</td>
                 <td className="py-3 px-4">
-                  <span
-                    className={`px-4 py-1 rounded-full text-sm font-medium inline-block ${
-                      statusColor[b.status] || "bg-gray-100 text-gray-600"
-                    }`}
-                  >
-                    {b.status}
-                  </span>
                 </td>
               </tr>
             ))}

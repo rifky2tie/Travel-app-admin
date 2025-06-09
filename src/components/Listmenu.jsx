@@ -1,3 +1,5 @@
+import { IoIosPeople } from "react-icons/io"; 
+import { CgWorkAlt } from "react-icons/cg"; 
 import { BsFillPeopleFill } from "react-icons/bs";
 import { BsReverseListColumnsReverse } from "react-icons/bs";
 import {
@@ -68,6 +70,18 @@ export default function Listmenu() {
         <NavLink to="/gallery" className={menuClass}>
           <FaImages />
           <span>Gallery</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/Lowongan" className={menuClass}>
+          <CgWorkAlt />
+          <span>Lowongan kerja</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/Tim" className={menuClass}>
+          <IoIosPeople />
+          <span>Daftar Tim</span>
         </NavLink>
       </li>
       <li>
