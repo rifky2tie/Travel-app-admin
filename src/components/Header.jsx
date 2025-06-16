@@ -24,6 +24,13 @@ export default function Header() {
       <div id="icons-container" className="flex items-center space-x-2">
         {/* Login Button */}
         <Link
+          to="/"
+          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+        >
+          Guest
+        </Link>
+
+        <Link
           to="/loginn"
           className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
         >

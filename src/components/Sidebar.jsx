@@ -10,7 +10,7 @@ export default function Sidebar() {
           <MdLocationOn />
         </span>
         <span className="font-Poppins-Extrabold text-lg text-gray-800">
-          Travelie
+          GoTravel
         </span>
       </div>
 
