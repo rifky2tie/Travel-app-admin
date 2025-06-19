@@ -1,7 +1,8 @@
-import { IoIosPeople } from "react-icons/io"; 
-import { CgWorkAlt } from "react-icons/cg"; 
-import { BsFillPeopleFill } from "react-icons/bs";
-import { BsReverseListColumnsReverse } from "react-icons/bs";
+import { MdTour } from "react-icons/md"; 
+import { useState } from "react";
+import { GiTicket } from "react-icons/gi";
+import { IoIosPeople } from "react-icons/io";
+import { CgWorkAlt } from "react-icons/cg";
 import {
   MdDashboard,
   MdOutlineCalendarToday,
@@ -14,11 +15,13 @@ import { FaImages, FaMapMarkerAlt, FaServicestack } from "react-icons/fa"; // Ta
 import { Link, NavLink } from "react-router-dom";
 
 export default function Listmenu() {
+  const [openDropdown, setOpenDropdown] = useState(false);
+
   const menuClass = ({ isActive }) =>
-    `flex items-center gap-3 px-4 py-2 rounded-md ${
-      isActive
-        ? "bg-blue-100 text-blue-600 font-medium"
-        : "hover:text-blue-600 hover:bg-blue-100 text-gray-500"
+    `flex items-center gap-3 py-2 rounded-md transition-all mx-6
+    ${isActive
+      ? "bg-blue-400 text-white font-medium px-4"
+      : "hover:text-white hover:bg-blue-400 text-gray-500 px-4"
     }`;
 
   return (
@@ -55,7 +58,7 @@ export default function Listmenu() {
       </li>
       <li>
         <NavLink to="/guides" className={menuClass}>
-          <MdOutlineCalendarToday />
+          <MdTour />
           <span>Guides</span>
         </NavLink>
       </li>
@@ -95,7 +98,54 @@ export default function Listmenu() {
           </span>
         </NavLink>
       </li>
-      <li>
+      <li className="relative">
+        <button
+          type="button"
+          onClick={() => setOpenDropdown((v) => !v)}
+          className="flex items-center gap-3 px-4 py-2 rounded-md hover:text-blue-600 hover:bg-blue-100 text-gray-500 cursor-pointer w-full"
+        >
+          <GiTicket />
+          <span>Tiket</span>
+          <svg
+            className="ml-auto w-3 h-3 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        {openDropdown && (
+          <ul
+            className="absolute left-full top-0 mt-0 ml-2 bg-white border border-gray-100 rounded-md shadow-lg w-48 py-2 z-10"
+            onMouseLeave={() => setOpenDropdown(false)}
+          >
+            <li>
+              <NavLink
+                to="/PesanTiket"
+                className={menuClass}
+                onClick={() => setOpenDropdown(false)}
+              >
+               
+                <span>Pesan Tiket</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/TiketDestinasi"
+                className={menuClass}
+                onClick={() => setOpenDropdown(false)}
+              >
+                
+                <span>Tiket Destinasi</span>
+              </NavLink>
+            </li>
+          </ul>
+        )}
+      </li>
+
+      {/* <li>
         <NavLink to="/error400" className={menuClass}>
           <MdErrorOutline />
           <span>Error 400</span>
@@ -112,8 +162,7 @@ export default function Listmenu() {
           <MdErrorOutline />
           <span>Error 403</span>
         </NavLink>
-      </li>
-      
+      </li> */}
     </ul>
   );
 }

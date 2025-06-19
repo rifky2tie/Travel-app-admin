@@ -57,7 +57,9 @@ export default function Gallery() {
           <button className="px-3 py-1 rounded bg-gray-100 text-gray-600">16</button>
           <button className="px-3 py-1 rounded bg-gray-100 text-gray-600">Next &gt;</button>
         </div>
+        
       </div>
+      
     </div>
   );
 }

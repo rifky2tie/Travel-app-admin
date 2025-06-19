@@ -7,7 +7,7 @@
       "status": "last seen recently",
       "lastMessage": "Got it, thank you! I'll review the details and get back to you soon.",
       "time": "Yesterday",
-      "unread": 0,
+      "unread": 1,
       "messages": [
         {
           "fromMe": false,
@@ -139,38 +139,6 @@
           "fromMe": false,
           "text": "We have updated our commission rates for the upcoming quarter. Please review.",
           "time": "2 days ago"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Luxury Hotels Europe",
-      "avatar": "",
-      "status": "last seen recently",
-      "lastMessage": "We are pleased to announce our new partnership with Travelie. Our luxury hotel chain...",
-      "time": "09/06/28",
-      "unread": 0,
-      "messages": [
-        {
-          "fromMe": false,
-          "text": "We are pleased to announce our new partnership with Travelie. Our luxury hotel chain is now available for your clients.",
-          "time": "09/06/28"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Brandon Lubin",
-      "avatar": "",
-      "status": "last seen recently",
-      "lastMessage": "Thank you for your assistance with my recent booking.",
-      "time": "30/05/28",
-      "unread": 0,
-      "messages": [
-        {
-          "fromMe": false,
-          "text": "Thank you for your assistance with my recent booking.",
-          "time": "30/05/28"
         }
       ]
     }

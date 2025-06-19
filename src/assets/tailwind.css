@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark;
+}
+
 @font-face {
     font-family: 'Barlow';
     src: url('/fonts/Barlow-Regular.ttf');
@@ -14,12 +18,17 @@
     font-family: 'Poppins-Extrabold';
     src: url('/fonts/Poppins-ExtraBold.ttf');
 }
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('/fonts/Poppins-Medium.ttf');
+}
 
 @theme {
 
     --font-barlow: "Barlow", sans-serif;
     --font-poppins: "Poppins",sans-serif;
     --font-Poppins-Extrabold:"Poppins-Extrabold", sans-serif;
+    --font-Poppins-Medium:"Poppins-Medium", sans-serif;
     --color-latar: #f3f4f6;
     --color-teks: #374151;
     --color-teks-samping: #6b7280;

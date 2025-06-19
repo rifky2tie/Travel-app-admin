@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Seoul, South Korea",
+    "label": "Cultural Exploration",
+    "image": "https://ayfnhq.org/wp-content/uploads/2020/02/seoul-0-1130x650.jpg",
+    "days": 10,
+    "nights": 9,
+    "price": "$2,100"
+  },
+  {
+    "id": 2,
+    "title": "Venice, Italy",
+    "label": "Venice Dreams",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZfUJJBH-4075sMhbq3ItNceUWCDPaKz5HDRrBVQr2SI4ucDAfQ759gpr376TzQUOGPc&usqp=CAU",
+    "days": 5,
+    "nights": 5,
+    "price": "$1,500"
+  },
+  {
+    "id": 3,
+    "title": "Serengeti, Tanzania",
+    "label": "Safari Adventure",
+    "image": "https://media.tacdn.com/media/attractions-splice-spp-360x240/07/94/c2/3b.jpg",
+    "days": 8,
+    "nights": 7,
+    "price": "$3,200"
+  }
+]

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { feedbackAPI } from "../services/feedbackAPI";
-import AlertBox from "../components/AlertBox";
-import GenericTable from "../components/GenericTable";
 import LoadingSpinner from "../components/LoadingSpinner";
 import EmptyState from "../components/EmptyState";
 import { AiFillDelete } from "react-icons/ai";
@@ -9,13 +7,7 @@ import { AiFillDelete } from "react-icons/ai";
 export default function Testi() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const [dataForm, setDataForm] = useState({
-    nama: "",
-    testimoni: "",
-  });
   const [feedback, setFeedback] = useState([]);
-  const [editId, setEditId] = useState(null);
 
   const loadFeedback = async () => {
     try {
@@ -35,188 +27,68 @@ export default function Testi() {
     loadFeedback();
   }, []);
 
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
-    setDataForm({
-      ...dataForm,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      setLoading(true);
-      setError("");
-      setSuccess("");
-
-      if (editId) {
-        await feedbackAPI.updateFeedback(editId, {
-          nama: dataForm.nama,
-          testimoni: dataForm.testimoni,
-        });
-        setSuccess("Catatan berhasil diperbarui!");
-      } else {
-        await feedbackAPI.createFeedback({
-          nama: dataForm.nama,
-          testimoni: dataForm.testimoni,
-        });
-        setSuccess("Catatan berhasil ditambahkan!");
-      }
-
-      setDataForm({ nama: "", testimoni: "" });
-      setEditId(null);
-
-      setTimeout(() => setSuccess(""), 3000);
-      loadFeedback();
-    } catch (err) {
-      setError(`Terjadi kesalahan: ${err.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleEdit = (testi) => {
-    setEditId(testi.id);
-    setDataForm({
-      nama: testi.nama,
-      testimoni: testi.testimoni,
-    });
-  };
-
   const handleDelete = async (id) => {
-    const konfirmasi = confirm("Yakin ingin menghapus catatan ini?");
+    const konfirmasi = window.confirm("Yakin ingin menghapus feedback ini?");
     if (!konfirmasi) return;
-
     try {
       setLoading(true);
       setError("");
-      setSuccess("");
-
       await feedbackAPI.deleteFeedback(id);
-
       loadFeedback();
     } catch (err) {
-      setError(`Terjadi kesalahan: ${err.message}`);
+      setError("Gagal menghapus feedback");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div
-      className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2"
-
-    >
-      <div className="w-full max-w-3xl">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2">
+      <div className="w-full max-w-6xl">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-extrabold text-blue-800 mb-2 drop-shadow">
-            Feedback App
+            Traveler Feedback
           </h2>
           <p className="text-blue-500 text-lg">
-            Kelola Feedback dan catatan dengan mudah dan cepat
+            Lihat pengalaman dan testimoni traveler lainnya
           </p>
         </div>
 
-        {/* TABLE DITARUH DI ATAS */}
-        <div className="bg-white/90 rounded-3xl shadow-xl overflow-hidden border border-blue-100 mb-10">
-          <div className="px-8 py-5 bg-blue-50 border-b border-blue-100">
-            <h3 className="text-lg font-semibold text-blue-800">
-              Daftar Feedback ({feedback.length})
-            </h3>
-          </div>
-          {loading && <LoadingSpinner text="Memuat catatan..." />}
-          {!loading && feedback.length === 0 && !error && (
-            <EmptyState text="Belum ada feedback. Tambah feedback pertama!" />
-          )}
-          {!loading && feedback.length === 0 && error && (
-            <EmptyState text="Terjadi Kesalahan. Coba lagi nanti." />
-          )}
-          {!loading && feedback.length > 0 && (
-            <GenericTable
-              columns={["#", "Judul", "Deskripsi", "Delete", "Ubah"]}
-              data={feedback}
-              renderRow={(testi, index) => (
-                <>
-                  <td className="px-6 py-4 font-medium text-gray-900">{index + 1}.</td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-gray-700">{testi.nama}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-700">{testi.testimoni}</div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <button onClick={() => handleDelete(testi.id)} disabled={loading}>
-                      <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
-                    </button>
-                  </td>
-                  <td className="px-6 py-4">
-                    <button
-                      onClick={() => handleEdit(testi)}
-                      disabled={loading}
-                      className="text-blue-500 hover:text-blue-700 font-medium"
-                    >
-                      Edit
-                    </button>
-                  </td>
-                </>
-              )}
-            />
-          )}
-        </div>
-
-        {error && <AlertBox type="error">{error}</AlertBox>}
-        {success && <AlertBox type="success">{success}</AlertBox>}
-
-        <div className="bg-white/90 rounded-3xl shadow-xl p-8 border border-blue-100">
-          <h3 className="text-xl font-bold text-blue-700 mb-4">
-            {editId ? "Edit feedback" : "Tambah feedback Baru"}
-          </h3>
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <input
-              type="text"
-              name="nama"
-              value={dataForm.nama}
-              placeholder="nama"
-              onChange={handleChange}
-              required
-              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200"
-            />
-            <textarea
-              name="testimoni"
-              value={dataForm.testimoni}
-              placeholder="feedback"
-              onChange={handleChange}
-              disabled={loading}
-              required
-              rows="3"
-              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200 resize-none"
-            />
-            <div className="flex gap-3">
-              <button
-                type="submit"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow"
-                disabled={loading}
+        {loading && <LoadingSpinner text="Memuat feedback..." />}
+        {!loading && feedback.length === 0 && !error && (
+          <EmptyState text="Belum ada feedback." />
+        )}
+        {!loading && feedback.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {feedback.map((testi, idx) => (
+              <div
+                key={testi.id || idx}
+                className="bg-white rounded-2xl shadow p-6 flex flex-col gap-2 relative"
               >
-                {loading ? "Mohon Tunggu..." : editId ? "Simpan Perubahan" : "Tambah Data"}
-              </button>
-              {editId && (
                 <button
-                  type="button"
-                  className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-blue-700 font-semibold rounded-xl transition-all duration-200"
-                  onClick={() => {
-                    setEditId(null);
-                    setDataForm({ nama: "", testimoni: "" });
-                  }}
+                  className="absolute top-3 right-3 text-red-400 hover:text-red-600"
+                  onClick={() => handleDelete(testi.id)}
+                  title="Hapus"
                   disabled={loading}
                 >
-                  Batal
+                  <AiFillDelete size={22} />
                 </button>
-              )}
-            </div>
-          </form>
-        </div>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700 text-lg uppercase">
+                    {testi.nama?.slice(0, 2) || "??"}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-800">{testi.nama}</div>
+                  </div>
+                </div>
+                <div className="text-gray-600">{testi.testimoni}</div>
+              </div>
+            ))}
+          </div>
+        )}
+        {error && (
+          <div className="mt-6 text-center text-red-500 font-semibold">{error}</div>
+        )}
       </div>
     </div>
   );

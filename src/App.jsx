@@ -20,6 +20,9 @@ const Message = React.lazy(() => import("./pages/Message"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
 const Lowongan = React.lazy(() => import("./pages/Lowongan"));
 const Tim = React.lazy(() => import("./pages/Tim"));
+const TiketDestinasi = React.lazy(() => import("./pages/TiketDestinasi"));
+const PesanTiket = React.lazy(() => import("./pages/PesanTiket"));
+
 const Detailguides = React.lazy(() => import("./pages/Detailguides"));
 const Detailgallery = React.lazy(() => import("./pages/Detailgallery"));
 const Detaildestinasi = React.lazy(() => import("./pages/Detaildestinasi"));
@@ -53,6 +56,8 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="Lowongan" element={<Lowongan />} />
           <Route path="Tim" element={<Tim />} />
+          <Route path="TiketDestinasi" element={<TiketDestinasi />} />
+          <Route path="PesanTiket" element={<PesanTiket />} />
           {/* <Route path="/orders" element={<Orders />} /> */}
           {/* <Route path="/Gallery" element={<Gallery />} /> */}
           {/* <Route path="/Message" element={<Message />} /> */}

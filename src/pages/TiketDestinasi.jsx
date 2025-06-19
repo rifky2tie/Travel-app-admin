@@ -1,29 +1,31 @@
 import { useState, useEffect } from "react";
-import { lowonganAPI } from "../services/lowonganAPI";
+import { tiketDestinasiAPI } from "../services/tiketDestinasiAPI"; // Ganti dengan API tiket destinasi kamu
 import AlertBox from "../components/AlertBox";
 import GenericTable from "../components/GenericTable";
 import LoadingSpinner from "../components/LoadingSpinner";
 import EmptyState from "../components/EmptyState";
 import { AiFillDelete } from "react-icons/ai";
 
-export default function Lowongan() {
+export default function TiketDestinasi() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [dataForm, setDataForm] = useState({
-    tanggal_tutup: "",
-    posisi: "",
-    deskripsi: "",
+    nama_pemesan: "",
+    email_pemesan: "",
+    no_hp: "",
+    jenis_tiket: "",
+    jumlah_tiket: "",
   });
-  const [lowongan, setLowongan] = useState([]);
+  const [tiket, setTiket] = useState([]);
   const [editId, setEditId] = useState(null);
 
-  const loadLowongan = async () => {
+  const loadTiket = async () => {
     try {
       setLoading(true);
       setError("");
-      const data = await lowonganAPI.fetchLowongan();
-      setLowongan(Array.isArray(data) ? data : []);
+      const data = await tiketDestinasiAPI.fetchTiket();
+      setTiket(Array.isArray(data) ? data : []);
     } catch (err) {
       setError("Gagal memuat data");
       console.error(err);
@@ -33,7 +35,7 @@ export default function Lowongan() {
   };
 
   useEffect(() => {
-    loadLowongan();
+    loadTiket();
   }, []);
 
   const handleChange = (evt) => {
@@ -53,26 +55,23 @@ export default function Lowongan() {
       setSuccess("");
 
       if (editId) {
-        await lowonganAPI.updateLowongan(editId, {
-          tanggal_tutup: dataForm.tanggal_tutup,
-          posisi: dataForm.posisi,
-          deskripsi: dataForm.deskripsi,
-        });
+        await tiketDestinasiAPI.updateTiket(editId, dataForm);
         setSuccess("Data berhasil diperbarui!");
       } else {
-        await lowonganAPI.createLowongan({
-          tanggal_tutup: dataForm.tanggal_tutup,
-          posisi: dataForm.posisi,
-          deskripsi: dataForm.deskripsi,
-        });
+        await tiketDestinasiAPI.createTiket(dataForm);
         setSuccess("Data berhasil ditambahkan!");
       }
-
-      setDataForm({ tanggal_tutup: "", posisi: "", deskripsi: "" });
+      setDataForm({
+        nama_pemesan: "",
+        email_pemesan: "",
+        no_hp: "",
+        jenis_tiket: "",
+        jumlah_tiket: "",
+      });
       setEditId(null);
 
       setTimeout(() => setSuccess(""), 3000);
-      loadLowongan();
+      loadTiket();
     } catch (err) {
       setError(`Terjadi kesalahan: ${err.message}`);
     } finally {
@@ -80,12 +79,14 @@ export default function Lowongan() {
     }
   };
 
-  const handleEdit = (lowong) => {
-    setEditId(lowong.id);
+  const handleEdit = (tiket) => {
+    setEditId(tiket.id);
     setDataForm({
-      tanggal_tutup: lowong.tanggal_tutup,
-      posisi: lowong.posisi,
-      deskripsi: lowong.deskripsi,
+      nama_pemesan: tiket.nama_pemesan,
+      email_pemesan: tiket.email_pemesan,
+      no_hp: tiket.no_hp,
+      jenis_tiket: tiket.jenis_tiket,
+      jumlah_tiket: tiket.jumlah_tiket,
     });
   };
 
@@ -98,9 +99,9 @@ export default function Lowongan() {
       setError("");
       setSuccess("");
 
-      await lowonganAPI.deleteLowongan(id);
+      await tiketDestinasiAPI.deleteTiket(id);
 
-      loadLowongan();
+      loadTiket();
     } catch (err) {
       setError(`Terjadi kesalahan: ${err.message}`);
     } finally {
@@ -110,53 +111,60 @@ export default function Lowongan() {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2">
-      <div className="w-full max-w-3xl">
+      <div className="w-full max-w-5xl">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-extrabold text-blue-800 mb-2 drop-shadow">
-            Lowongan App
+            Tiket Destinasi
           </h2>
           <p className="text-blue-500 text-lg">
-            Kelola Lowongan dengan mudah dan cepat
+            Kelola Tiket Destinasi dengan mudah dan cepat
           </p>
         </div>
 
         <div className="bg-white/90 rounded-3xl shadow-xl overflow-hidden border border-blue-100 mb-10">
           <div className="px-8 py-5 bg-blue-50 border-b border-blue-100">
             <h3 className="text-lg font-semibold text-blue-800">
-              Daftar Lowongan ({lowongan.length})
+              Daftar Tiket Destinasi ({tiket.length})
             </h3>
           </div>
           {loading && <LoadingSpinner text="Memuat data..." />}
-          {!loading && lowongan.length === 0 && !error && (
-            <EmptyState text="Belum ada lowongan. Tambah lowongan pertama!" />
+          {!loading && tiket.length === 0 && !error && (
+            <EmptyState text="Belum ada tiket. Tambah tiket pertama!" />
           )}
-          {!loading && lowongan.length === 0 && error && (
+          {!loading && tiket.length === 0 && error && (
             <EmptyState text="Terjadi Kesalahan. Coba lagi nanti." />
           )}
-          {!loading && lowongan.length > 0 && (
+          {!loading && tiket.length > 0 && (
             <GenericTable
-              columns={["#", "tanggal_tutup", "Posisi", "Deskripsi", "Delete", "Ubah"]}
-              data={lowongan}
-              renderRow={(lowong, index) => (
+              columns={[
+                "#",
+                "Nama Pemesan",
+                "Email Pemesan",
+                "No HP",
+                "Jenis Tiket",
+                "Jumlah Tiket",
+                "Delete",
+                "Ubah",
+              ]}
+              data={tiket}
+              renderRow={(t, index) => (
                 <>
-                  <td className="px-6 py-4 font-medium text-gray-900">{index + 1}.</td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-gray-700">{lowong.tanggal_tutup}</div>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    {index + 1}.
                   </td>
+                  <td className="px-6 py-4">{t.nama_pemesan}</td>
+                  <td className="px-6 py-4">{t.email_pemesan}</td>
+                  <td className="px-6 py-4">{t.no_hp}</td>
+                  <td className="px-6 py-4">{t.jenis_tiket}</td>
+                  <td className="px-6 py-4">{t.jumlah_tiket}</td>
                   <td className="px-6 py-4">
-                    <div className="text-gray-700">{lowong.posisi}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-700">{lowong.deskripsi}</div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <button onClick={() => handleDelete(lowong.id)} disabled={loading}>
+                    <button onClick={() => handleDelete(t.id)} disabled={loading}>
                       <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
                     </button>
                   </td>
                   <td className="px-6 py-4">
                     <button
-                      onClick={() => handleEdit(lowong)}
+                      onClick={() => handleEdit(t)}
                       disabled={loading}
                       className="text-blue-500 hover:text-blue-700 font-medium"
                     >
@@ -174,36 +182,53 @@ export default function Lowongan() {
 
         <div className="bg-white/90 rounded-3xl shadow-xl p-8 border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-4">
-            {editId ? "Edit Lowongan" : "Tambah Lowongan Baru"}
+            {editId ? "Edit Tiket" : "Tambah Tiket Baru"}
           </h3>
           <form onSubmit={handleSubmit} className="space-y-5">
             <input
               type="text"
-              name="tanggal_tutup"
-              value={dataForm.tanggal_tutup}
-              placeholder="tanggal_tutup"
+              name="nama_pemesan"
+              value={dataForm.nama_pemesan}
+              placeholder="Nama Pemesan"
               onChange={handleChange}
               required
-              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200"
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200"
+            />
+            <input
+              type="email"
+              name="email_pemesan"
+              value={dataForm.email_pemesan}
+              placeholder="Email Pemesan"
+              onChange={handleChange}
+              required
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200"
             />
             <input
               type="text"
-              name="posisi"
-              value={dataForm.posisi}
-              placeholder="Posisi"
+              name="no_hp"
+              value={dataForm.no_hp}
+              placeholder="No HP"
               onChange={handleChange}
               required
-              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200"
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200"
             />
-            <textarea
-              name="deskripsi"
-              value={dataForm.deskripsi}
-              placeholder="Deskripsi"
+            <input
+              type="text"
+              name="jenis_tiket"
+              value={dataForm.jenis_tiket}
+              placeholder="Jenis Tiket"
               onChange={handleChange}
-              disabled={loading}
               required
-              rows="3"
-              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200 resize-none"
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200"
+            />
+            <input
+              type="number"
+              name="jumlah_tiket"
+              value={dataForm.jumlah_tiket}
+              placeholder="Jumlah Tiket"
+              onChange={handleChange}
+              required
+              className="w-full p-3 bg-blue-50 rounded-xl border border-blue-200"
             />
             <div className="flex gap-3">
               <button
@@ -211,7 +236,11 @@ export default function Lowongan() {
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow"
                 disabled={loading}
               >
-                {loading ? "Mohon Tunggu..." : editId ? "Simpan Perubahan" : "Tambah Data"}
+                {loading
+                  ? "Mohon Tunggu..."
+                  : editId
+                  ? "Simpan Perubahan"
+                  : "Tambah Data"}
               </button>
               {editId && (
                 <button
@@ -219,7 +248,13 @@ export default function Lowongan() {
                   className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-blue-700 font-semibold rounded-xl transition-all duration-200"
                   onClick={() => {
                     setEditId(null);
-                    setDataForm({ tanggal_tutup: "", posisi: "", deskripsi: "" });
+                    setDataForm({
+                      nama_pemesan: "",
+                      email_pemesan: "",
+                      no_hp: "",
+                      jenis_tiket: "",
+                      jumlah_tiket: "",
+                    });
                   }}
                   disabled={loading}
                 >
