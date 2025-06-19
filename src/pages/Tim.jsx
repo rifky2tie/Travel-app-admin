@@ -147,17 +147,17 @@ export default function Tim() {
               renderRow={(tim, index) => (
                 <>
                   <td className="px-6 py-4 font-medium text-gray-900">{index + 1}.</td>
-                  <td className="px-6 py-4">{tim.nama}</td>
-                  <td className="px-6 py-4">{tim.posisi}</td>
-                  <td className="px-6 py-4">{tim.email}</td>
-                  <td className="px-6 py-4">{tim.no_hp}</td>
-                  <td className="px-6 py-4">{tim.usia}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4 font-medium text-gray-900">{tim.nama}</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">{tim.posisi}</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">{tim.email}</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">{tim.no_hp}</td>
+                  <td className="px-6 py-4 font-medium text-gray-900">{tim.usia}</td>
+                  <td className="px-6 py-4 ">
                     <button onClick={() => handleDelete(tim.id)} disabled={loading}>
                       <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
                     </button>
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4 ">
                     <button
                       onClick={() => handleEdit(tim)}
                       disabled={loading}
