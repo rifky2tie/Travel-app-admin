@@ -22,7 +22,7 @@ export default function Sidebar() {
 
         {/* Logout Button */}
         <a
-          href="#"
+          href="https://go-travel3.vercel.app/"
           className="flex items-center gap-2 text-gray-500 hover:text-red-500 font-medium px-6 py-3 mt-auto mb-6"
         >
           <FiLogOut className="text-xl" />
