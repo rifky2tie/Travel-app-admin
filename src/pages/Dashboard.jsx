@@ -188,6 +188,100 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+          {/* Recent Bookings - added section */}
+          <div className="bg-white rounded-2xl border border-gray-200 p-6 mt-6">
+            <div className="flex justify-between items-center mb-4">
+              <span className="font-semibold text-base">Recent Bookings</span>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Search anything"
+                  className="bg-blue-50 rounded-lg px-4 py-2 text-sm outline-none border-none w-56"
+                />
+                <button className="bg-blue-400 text-white px-5 py-2 rounded-lg text-sm font-semibold">
+                  View All
+                </button>
+              </div>
+            </div>
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-blue-50 text-gray-400 text-sm">
+                  <th className="py-3 px-2 font-semibold rounded-tl-xl">
+                    Name &nbsp;⇅
+                  </th>
+                  <th className="py-3 px-2 font-semibold">Package &nbsp;⇅</th>
+                  <th className="py-3 px-2 font-semibold">Duration &nbsp;⇅</th>
+                  <th className="py-3 px-2 font-semibold">Date &nbsp;⇅</th>
+                  <th className="py-3 px-2 font-semibold">Price &nbsp;⇅</th>
+                  <th className="py-3 px-2 font-semibold rounded-tr-xl">
+                    Status &nbsp;⇅
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700 text-sm">
+                <tr className="border-b">
+                  <td className="py-3 px-2">Camellia Swan</td>
+                  <td className="py-3 px-2">Venice Dreams</td>
+                  <td className="py-3 px-2">6D5N</td>
+                  <td className="py-3 px-2">Jun 25 - Jun 30</td>
+                  <td className="py-3 px-2">$1,500</td>
+                  <td className="py-3 px-2">
+                    <span className="bg-blue-100 text-blue-500 px-3 py-1 rounded-lg text-xs font-semibold">
+                      Confirmed
+                    </span>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-2">Raphael Goodman</td>
+                  <td className="py-3 px-2">Safari Adventure</td>
+                  <td className="py-3 px-2">8D7N</td>
+                  <td className="py-3 px-2">Jun 25 - Jul 2</td>
+                  <td className="py-3 px-2">$3,200</td>
+                  <td className="py-3 px-2">
+                    <span className="bg-blue-50 text-blue-400 px-3 py-1 rounded-lg text-xs font-semibold">
+                      Pending
+                    </span>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-2">Ludwig Contessa</td>
+                  <td className="py-3 px-2">Alpine Escape</td>
+                  <td className="py-3 px-2">7D6N</td>
+                  <td className="py-3 px-2">Jun 26 - Jul 2</td>
+                  <td className="py-3 px-2">$2,100</td>
+                  <td className="py-3 px-2">
+                    <span className="bg-blue-100 text-blue-500 px-3 py-1 rounded-lg text-xs font-semibold">
+                      Confirmed
+                    </span>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-2">Armina Raul Meyes</td>
+                  <td className="py-3 px-2">Caribbean Cruise</td>
+                  <td className="py-3 px-2">10D9N</td>
+                  <td className="py-3 px-2">Jun 26 - Jul 5</td>
+                  <td className="py-3 px-2">$2,800</td>
+                  <td className="py-3 px-2">
+                    <span className="bg-red-50 text-red-400 px-3 py-1 rounded-lg text-xs font-semibold">
+                      Cancelled
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-2">James Dunn</td>
+                  <td className="py-3 px-2">Parisian Romance</td>
+                  <td className="py-3 px-2">5D4N</td>
+                  <td className="py-3 px-2">Jun 26 - Jun 30</td>
+                  <td className="py-3 px-2">$1,200</td>
+                  <td className="py-3 px-2">
+                    <span className="bg-blue-100 text-blue-500 px-3 py-1 rounded-lg text-xs font-semibold">
+                      Confirmed
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         {/* Sidebar */}
         <RightSidebar className="mt-[-18px]" />
@@ -428,9 +522,10 @@ function TotalTrips() {
 
 function RightSidebar({ className = "" }) {
   return (
-    <aside className={`bg-white rounded-2xl border border-gray-200 p-4 flex flex-col gap-6 max-w-[300px] ${className}`}>
-      {/* Calendar */}
-      <div>
+    <aside className={`flex flex-col gap-4 max-w-[300px] ${className}`}>
+      {/* Calendar + Upcoming Trips dalam satu kotak */}
+      <div className="bg-white rounded-2xl border border-gray-200 p-4">
+        {/* Calendar */}
         <div className="flex items-center justify-between mb-1">
           <span className="font-bold text-base text-gray-800">July 2028</span>
           <div className="flex gap-1">
@@ -536,152 +631,204 @@ function RightSidebar({ className = "" }) {
             </tbody>
           </table>
         </div>
-      </div>
-      {/* Garis pemisah */}
-      <hr className="my-3 border-t border-gray-200" />
-      {/* Upcoming Trips */}
-      <div>
-        <div className="flex justify-between items-center mb-2">
-          <span className="font-bold text-base text-gray-800">
-            Upcoming Trips
-          </span>
-          <button className="bg-blue-400 text-white rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold shadow-sm">
-            +
-          </button>
-        </div>
-        <div className="flex flex-col gap-2">
+
+        {/* Garis pemisah */}
+        <hr className="my-4 border-t border-gray-200" />
+
+        {/* Upcoming Trips */}
+        <div className="mb-2">
+          <div className="flex items-center justify-between mb-3">
+            <span className="font-semibold text-base text-gray-800">Upcoming Trips</span>
+            <button className="bg-blue-400 hover:bg-blue-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-xl">
+              <FaIcons.FaPlus />
+            </button>
+          </div>
           {/* Trip 1 */}
-          <div className="flex items-center gap-2 p-2 rounded-xl hover:bg-blue-50 transition">
+          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50 transition">
             <img
-              src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=44&h=44"
+              src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=56&h=56"
               alt="Paris"
-              className="w-11 h-11 rounded-lg object-cover"
+              className="w-14 h-14 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <div className="flex gap-1 mb-0.5">
-                <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-semibold">
+              <div className="flex gap-1 mb-1">
+                <span className="bg-blue-100 text-[10px] px-2 py-0.5 rounded font-semibold">
                   Romantic Getaway
                 </span>
               </div>
-              <div className="font-semibold text-gray-800 text-sm leading-tight">
+              <div className="font-bold text-gray-800 text-xs leading-tight mb-1">
                 Paris, France
               </div>
-              <div className="flex items-center gap-1 text-xs text-gray-400 mt-0.5">
-                <span>
-                  <span role="img" aria-label="avatar">
-                    👩‍🦰
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👨‍🦱
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👩‍🦳
-                  </span>
-                  +9
+              <div className="flex items-center gap-3 text-xs text-gray-400">
+                <span className="flex items-center">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-0" />
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <span className="ml-1 text-gray-500 font-semibold">+9</span>
                 </span>
-                <span className="ml-2">📅 5 - 10 July</span>
+                <span className="flex items-center gap-1 text-gray-500">
+                  <FaIcons.FaRegCalendarAlt /> 5 - 10 July
+                </span>
               </div>
             </div>
           </div>
           {/* Trip 2 */}
-          <div className="flex items-center gap-2 p-2 rounded-xl bg-blue-50">
+          <div className="flex items-center gap-3 p-2 rounded-xl bg-blue-50">
             <img
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=44&h=44"
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=56&h=56"
               alt="Tokyo"
-              className="w-11 h-11 rounded-lg object-cover"
+              className="w-14 h-14 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <div className="flex gap-1 mb-0.5">
-                <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-semibold">
+              <div className="flex gap-1 mb-1">
+                <span className="bg-blue-100  text-[10px] px-2 py-0.5 rounded font-semibold">
                   Cultural Exploration
                 </span>
               </div>
-              <div className="font-semibold text-gray-800 text-sm leading-tight">
+              <div className="font-bold text-gray-800 text-xs leading-tight mb-1">
                 Tokyo, Japan
               </div>
-              <div className="flex items-center gap-1 text-xs text-gray-400 mt-0.5">
-                <span>
-                  <span role="img" aria-label="avatar">
-                    👩🏽‍🦰
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👨🏾‍🦱
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👩🏼‍🦳
-                  </span>
-                  +17
+              <div className="flex items-center gap-3 text-xs text-gray-400">
+                <span className="flex items-center">
+                  <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-0" />
+                  <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <span className="ml-1 text-gray-500 font-semibold">+17</span>
                 </span>
-                <span className="ml-2">📅 12 - 19 July</span>
+                <span className="flex items-center gap-1 text-gray-500">
+                  <FaIcons.FaRegCalendarAlt /> 12 - 19 July
+                </span>
               </div>
             </div>
           </div>
           {/* Trip 3 */}
-          <div className="flex items-center gap-2 p-2 rounded-xl hover:bg-blue-50 transition">
+          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50 transition">
             <img
-              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=44&h=44"
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=56&h=56"
               alt="Sydney"
-              className="w-11 h-11 rounded-lg object-cover"
+              className="w-14 h-14 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <div className="flex gap-1 mb-0.5">
-                <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-semibold">
+              <div className="flex gap-1 mb-1">
+                <span className="bg-blue-100 text-[10px] px-2 py-0.5 rounded font-semibold">
                   Adventure Tour
                 </span>
               </div>
-              <div className="font-semibold text-gray-800 text-sm leading-tight">
+              <div className="font-bold text-gray-800 text-xs leading-tight mb-1">
                 Sydney, Australia
               </div>
-              <div className="flex items-center gap-1 text-xs text-gray-400 mt-0.5">
-                <span>
-                  <span role="img" aria-label="avatar">
-                    👩🏻‍🦰
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👨🏼‍🦱
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👩🏾‍🦳
-                  </span>
-                  +12
+              <div className="flex items-center gap-3 text-xs text-gray-400">
+                <span className="flex items-center">
+                  <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-0" />
+                  <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <span className="ml-1 text-gray-500 font-semibold">+12</span>
                 </span>
-                <span className="ml-2">📅 15 - 24 July</span>
+                <span className="flex items-center gap-1 text-gray-500">
+                  <FaIcons.FaRegCalendarAlt /> 15 - 24 July
+                </span>
               </div>
             </div>
           </div>
           {/* Trip 4 */}
-          <div className="flex items-center gap-2 p-2 rounded-xl hover:bg-blue-50 transition">
+          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50 transition">
             <img
-              src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=44&h=44"
+              src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=56&h=56"
               alt="New York"
-              className="w-11 h-11 rounded-lg object-cover"
+              className="w-14 h-14 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <div className="flex gap-1 mb-0.5">
-                <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-semibold">
+              <div className="flex gap-1 mb-1">
+                <span className="bg-blue-100  text-[10px] px-2 py-0.5 rounded font-semibold">
                   City Highlights
                 </span>
               </div>
-              <div className="font-semibold text-gray-800 text-sm leading-tight">
+              <div className="font-bold text-gray-800 text-xs leading-tight mb-1">
                 New York, USA
               </div>
-              <div className="flex items-center gap-1 text-xs text-gray-400 mt-0.5">
-                <span>
-                  <span role="img" aria-label="avatar">
-                    👩🏿‍🦰
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👨🏻‍🦱
-                  </span>
-                  <span role="img" aria-label="avatar">
-                    👩‍🦳
-                  </span>
-                  +22
+              <div className="flex items-center gap-3 text-xs text-gray-400">
+                <span className="flex items-center">
+                  <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-0" />
+                  <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="" className="w-5 h-5 rounded-full border-2 border-white -ml-2" />
+                  <span className="ml-1 text-gray-500 font-semibold">+22</span>
                 </span>
-                <span className="ml-2">📅 20 - 25 July</span>
+                <span className="flex items-center gap-1 text-gray-500">
+                  <FaIcons.FaRegCalendarAlt /> 20 - 25 July
+                </span>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Recent Activity - kotak sendiri, border terpisah */}
+      <div className="bg-white rounded-2xl p-4 border border-gray-200">
+        <div className="flex justify-between items-center mb-3">
+          <span className="font-semibold text-base">Recent Activity</span>
+          <button className="text-gray-400 text-xl">
+            <FaIcons.FaEllipsisH />
+          </button>
+        </div>
+        <div>
+          <div className="text-xs text-gray-400 mb-3">Today</div>
+          <ul className="flex flex-col gap-4">
+            <li className="flex items-start gap-3">
+              <span className="bg-blue-100 text-blue-500 rounded-full w-8 h-8 flex items-center justify-center mt-0.5">
+                <FaIcons.FaSyncAlt />
+              </span>
+              <div>
+                <div className="text-sm text-gray-800">
+                  Alberto Cortez updated his profile and added a new payment method
+                </div>
+                <div className="text-xs text-gray-400 mt-1">9:30 AM</div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-blue-100 text-blue-500 rounded-full w-8 h-8 flex items-center justify-center mt-0.5">
+                <FaIcons.FaCalendarAlt />
+              </span>
+              <div>
+                <div className="text-sm text-gray-800">
+                  Camellia Swan booked the Venice Dreams package for June 25, 2024.
+                </div>
+                <div className="text-xs text-gray-400 mt-1">10:00 AM</div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-blue-100 text-blue-500 rounded-full w-8 h-8 flex items-center justify-center mt-0.5">
+                <FaIcons.FaMoneyCheckAlt />
+              </span>
+              <div>
+                <div className="text-sm text-gray-800">
+                  Payment was processed for Ludwig Contessa's Alpine Escape package.
+                </div>
+                <div className="text-xs text-gray-400 mt-1">11:15 AM</div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-blue-100 text-blue-500 rounded-full w-8 h-8 flex items-center justify-center mt-0.5">
+                <FaIcons.FaTimesCircle />
+              </span>
+              <div>
+                <div className="text-sm text-gray-800">
+                  Armina Raul Meyes canceled her Caribbean Cruise package.
+                </div>
+                <div className="text-xs text-gray-400 mt-1">12:45 PM</div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-blue-100 text-blue-500 rounded-full w-8 h-8 flex items-center justify-center mt-0.5">
+                <FaIcons.FaStar />
+              </span>
+              <div>
+                <div className="text-sm text-gray-800">
+                  Lydia Billings submitted a review for her recent package.
+                </div>
+                <div className="text-xs text-gray-400 mt-1">2:30 PM</div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </aside>
