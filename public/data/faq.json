@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Pemesanan",
+    "question": "Bagaimana cara memesan tiket perjalanan?",
+    "answer": "Anda dapat memesan tiket dengan mudah melalui website kami. Pilih destinasi, tanggal keberangkatan, dan jumlah penumpang. Setelah itu, lakukan pembayaran untuk mengkonfirmasi pemesanan Anda."
+  },
+  {
+    "category": "Pembayaran",
+    "question": "Apa saja metode pembayaran yang tersedia?",
+    "answer": "Kami menerima berbagai metode pembayaran termasuk kartu kredit (Visa, MasterCard), transfer bank, e-wallet (GoPay, OVO, DANA), dan pembayaran di minimarket (Indomaret, Alfamart)."
+  },
+  {
+    "category": "Pemesanan",
+    "question": "Bisakah saya membatalkan atau mengubah pemesanan?",
+    "answer": "Ya, Anda dapat membatalkan atau mengubah pemesanan hingga 24 jam sebelum keberangkatan. Namun, biaya pembatalan atau perubahan mungkin berlaku tergantung pada jenis tiket dan waktu pembatalan."
+  },
+  {
+    "category": "Pemesanan",
+    "question": "Bagaimana cara mendapatkan e-ticket setelah pembayaran?",
+    "answer": "Setelah pembayaran berhasil dikonfirmasi, e-ticket akan dikirim otomatis ke email yang Anda daftarkan. Pastikan email Anda aktif dan periksa folder spam jika tidak menerima email dalam 15 menit."
+  },
+  {
+    "category": "Pemesanan",
+    "question": "Apakah ada diskon untuk pemesanan grup?",
+    "answer": "Ya, kami menawarkan diskon khusus untuk pemesanan grup minimal 10 orang. Hubungi customer service kami untuk mendapatkan penawaran terbaik dan bantuan dalam mengatur perjalanan grup Anda."
+  },
+  {
+    "category": "Bantuan",
+    "question": "Bagaimana jika saya ketinggalan keberangkatan?",
+    "answer": "Jika Anda ketinggalan keberangkatan, segera hubungi customer service kami. Bergantung pada jenis tiket, Anda mungkin dapat dipindahkan ke jadwal berikutnya dengan biaya tambahan atau mendapatkan refund sebagian."
+  },
+  {
+    "category": "Pemesanan",
+    "question": "Apakah tersedia asuransi perjalanan?",
+    "answer": "Ya, kami menyediakan opsi asuransi perjalanan yang dapat Anda pilih saat pemesanan. Asuransi ini mencakup pembatalan perjalanan, keterlambatan, kehilangan bagasi, dan perlindungan medis dasar."
+  },
+  {
+    "category": "Bantuan",
+    "question": "Bagaimana cara menghubungi customer service?",
+    "answer": "Anda dapat menghubungi customer service kami melalui WhatsApp di +62-812-3456-7890, email di support@gotravel.com, atau live chat di website kami. Layanan tersedia 24/7 untuk membantu Anda."
+  },
+  {
+    "category": "Pembayaran",
+    "question": "Apakah pembayaran saya aman?",
+    "answer": "Absolutely! Kami menggunakan enkripsi SSL 256-bit dan bekerja sama dengan payment gateway terpercaya. Data kartu kredit Anda tidak akan disimpan di server kami."
+  }
+]

@@ -20,7 +20,6 @@
     "title": "Safari Adventure",
     "location": "Serengeti, Tanzania",
     "image": "https://img.freepik.com/premium-photo/epic-safari-adventures-visual-safari-wildlife-photography_1032986-4626.jpg"
-
   },
   {
     "name": "Ludwig Contessa",
@@ -29,7 +28,7 @@
     "duration": "7 Days / 6 Nights",
     "date": "Jun 26 - Jul 2",
     "price": "$2,100",
-        "title": "Alpine Escape",
+    "title": "Alpine Escape",
     "location": "Swiss Alps, Switzerland",
     "image": "https://ts3.mm.bing.net/th?id=OIP.lmtDBaEIbQz-b_iLx-l3qwHaFj&pid=15.1"
   },
@@ -40,7 +39,7 @@
     "duration": "10 Days / 9 Nights",
     "date": "Jun 26 - Jul 5",
     "price": "$2,800",
-        "title": "Caribbean Cruise",
+    "title": "Caribbean Cruise",
     "location": "Caribbean Islands",
     "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
   },
@@ -51,7 +50,7 @@
     "duration": "5 Days / 4 Nights",
     "date": "Jun 26 - Jun 30",
     "price": "$1,200",
-        "title": "Parisian Romance",
+    "title": "Parisian Romance",
     "location": "Paris, France",
     "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
   },
@@ -65,7 +64,6 @@
     "title": "Tokyo Cultural Adventure",
     "location": "Tokyo, Japan",
     "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
-
   },
   {
     "name": "Lucas O'connor",
@@ -77,7 +75,6 @@
     "title": "Greek Island Hopping",
     "location": "Santorini, Greece",
     "image": "https://th.bing.com/th/id/OIP.cskP-unxa8cRn8zWYyYbiwHaE8?w=221&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-
   },
   {
     "name": "Layla Linch",
@@ -89,6 +86,225 @@
     "title": "Bali Beach Escape",
     "location": "Bali, Indonesia",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-
+  },
+  {
+    "name": "Sofia Martinez",
+    "bookingCode": "BKG12353",
+    "package": "New York City Lights",
+    "duration": "6 Days / 5 Nights",
+    "date": "Jul 1 - Jul 6",
+    "price": "$2,200",
+    "title": "New York City Lights",
+    "location": "New York, USA",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "William Chen",
+    "bookingCode": "BKG12354",
+    "package": "Sydney Opera Experience",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jul 2 - Jul 8",
+    "price": "$2,700",
+    "title": "Sydney Opera Experience",
+    "location": "Sydney, Australia",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Fatima Noor",
+    "bookingCode": "BKG12355",
+    "package": "Dubai Luxury Tour",
+    "duration": "5 Days / 4 Nights",
+    "date": "Jul 3 - Jul 7",
+    "price": "$3,000",
+    "title": "Dubai Luxury Tour",
+    "location": "Dubai, UAE",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Oliver Smith",
+    "bookingCode": "BKG12356",
+    "package": "London Heritage Walk",
+    "duration": "6 Days / 5 Nights",
+    "date": "Jul 4 - Jul 9",
+    "price": "$2,100",
+    "title": "London Heritage Walk",
+    "location": "London, UK",
+    "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Ava Müller",
+    "bookingCode": "BKG12357",
+    "package": "Berlin Art & History",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jul 5 - Jul 11",
+    "price": "$1,900",
+    "title": "Berlin Art & History",
+    "location": "Berlin, Germany",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Hillary Grey",
+    "bookingCode": "BKG12350",
+    "package": "Tokyo Cultural Adventure",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jun 27 - Jul 3",
+    "price": "$1,800",
+    "title": "Tokyo Cultural Adventure",
+    "location": "Tokyo, Japan",
+    "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Lucas O'connor",
+    "bookingCode": "BKG12351",
+    "package": "Greek Island Hopping",
+    "duration": "10 Days / 9 Nights",
+    "date": "Jun 28 - Jul 7",
+    "price": "$2,500",
+    "title": "Greek Island Hopping",
+    "location": "Santorini, Greece",
+    "image": "https://th.bing.com/th/id/OIP.cskP-unxa8cRn8zWYyYbiwHaE8?w=221&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+  },
+  {
+    "name": "Layla Linch",
+    "bookingCode": "BKG12352",
+    "package": "Bali Beach Escape",
+    "duration": "8 Days / 7 Nights",
+    "date": "Jun 29 - Jul 6",
+    "price": "$1,600",
+    "title": "Bali Beach Escape",
+    "location": "Bali, Indonesia",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Sofia Martinez",
+    "bookingCode": "BKG12353",
+    "package": "New York City Lights",
+    "duration": "6 Days / 5 Nights",
+    "date": "Jul 1 - Jul 6",
+    "price": "$2,200",
+    "title": "New York City Lights",
+    "location": "New York, USA",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "William Chen",
+    "bookingCode": "BKG12354",
+    "package": "Sydney Opera Experience",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jul 2 - Jul 8",
+    "price": "$2,700",
+    "title": "Sydney Opera Experience",
+    "location": "Sydney, Australia",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Fatima Noor",
+    "bookingCode": "BKG12355",
+    "package": "Dubai Luxury Tour",
+    "duration": "5 Days / 4 Nights",
+    "date": "Jul 3 - Jul 7",
+    "price": "$3,000",
+    "title": "Dubai Luxury Tour",
+    "location": "Dubai, UAE",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Oliver Smith",
+    "bookingCode": "BKG12356",
+    "package": "London Heritage Walk",
+    "duration": "6 Days / 5 Nights",
+    "date": "Jul 4 - Jul 9",
+    "price": "$2,100",
+    "title": "London Heritage Walk",
+    "location": "London, UK",
+    "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Ava Müller",
+    "bookingCode": "BKG12357",
+    "package": "Berlin Art & History",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jul 5 - Jul 11",
+    "price": "$1,900",
+    "title": "Berlin Art & History",
+    "location": "Berlin, Germany",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Noah Dubois",
+    "bookingCode": "BKG12358",
+    "package": "Paris Gourmet Tour",
+    "duration": "5 Days / 4 Nights",
+    "date": "Jul 6 - Jul 10",
+    "price": "$2,400",
+    "title": "Paris Gourmet Tour",
+    "location": "Paris, France",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Emma Rossi",
+    "bookingCode": "BKG12359",
+    "package": "Rome Ancient Wonders",
+    "duration": "8 Days / 7 Nights",
+    "date": "Jul 7 - Jul 14",
+    "price": "$2,600",
+    "title": "Rome Ancient Wonders",
+    "location": "Rome, Italy",
+    "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Lucas Kim",
+    "bookingCode": "BKG12360",
+    "package": "Seoul City Discovery",
+    "duration": "6 Days / 5 Nights",
+    "date": "Jul 8 - Jul 13",
+    "price": "$1,700",
+    "title": "Seoul City Discovery",
+    "location": "Seoul, South Korea",
+    "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Mia Johansson",
+    "bookingCode": "BKG12361",
+    "package": "Stockholm Archipelago",
+    "duration": "7 Days / 6 Nights",
+    "date": "Jul 9 - Jul 15",
+    "price": "$2,300",
+    "title": "Stockholm Archipelago",
+    "location": "Stockholm, Sweden",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Ethan Brown",
+    "bookingCode": "BKG12362",
+    "package": "Canadian Rockies Adventure",
+    "duration": "9 Days / 8 Nights",
+    "date": "Jul 10 - Jul 18",
+    "price": "$3,100",
+    "title": "Canadian Rockies Adventure",
+    "location": "Banff, Canada",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Sophia Lee",
+    "bookingCode": "BKG12363",
+    "package": "Singapore City Lights",
+    "duration": "5 Days / 4 Nights",
+    "date": "Jul 11 - Jul 15",
+    "price": "$1,800",
+    "title": "Singapore City Lights",
+    "location": "Singapore",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "name": "Jack Wilson",
+    "bookingCode": "BKG12364",
+    "package": "Cape Town Explorer",
+    "duration": "8 Days / 7 Nights",
+    "date": "Jul 12 - Jul 19",
+    "price": "$2,900",
+    "title": "Cape Town Explorer",
+    "location": "Cape Town, South Africa",
+    "image": "https://img.freepik.com/premium-photo/epic-safari-adventures-visual-safari-wildlife-photography_1032986-4626.jpg"
   }
 ]

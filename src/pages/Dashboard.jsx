@@ -1,4 +1,4 @@
-import * as FaIcons from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";  
 import Data from "../assets/Data.json";
 import {
   LineChart,

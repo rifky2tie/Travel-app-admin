@@ -1,0 +1,74 @@
+[
+  {
+    "nama": "Andi Pratama",
+    "email": "andi.pratama@email.com",
+    "no_hp": "081234567890",
+    "tgl_checkin": "2025-07-10",
+    "tgl_checkout": "2025-07-12",
+    "jumlah_kamar": 2,
+    "jumlah_orang": 4
+  },
+  {
+    "nama": "Siti Rahmawati",
+    "email": "siti.rahmawati@email.com",
+    "no_hp": "082233445566",
+    "tgl_checkin": "2025-07-15",
+    "tgl_checkout": "2025-07-18",
+    "jumlah_kamar": 1,
+    "jumlah_orang": 2
+  },
+  {
+    "nama": "Budi Santoso",
+    "email": "budi.santoso@email.com",
+    "no_hp": "081322334455",
+    "tgl_checkin": "2025-07-20",
+    "tgl_checkout": "2025-07-22",
+    "jumlah_kamar": 3,
+    "jumlah_orang": 6
+  },
+  {
+    "nama": "Dewi Lestari",
+    "email": "dewi.lestari@email.com",
+    "no_hp": "081355667788",
+    "tgl_checkin": "2025-07-25",
+    "tgl_checkout": "2025-07-28",
+    "jumlah_kamar": 2,
+    "jumlah_orang": 3
+  },
+  {
+    "nama": "Rizky Maulana",
+    "email": "rizky.maulana@email.com",
+    "no_hp": "081377889900",
+    "tgl_checkin": "2025-07-30",
+    "tgl_checkout": "2025-08-02",
+    "jumlah_kamar": 1,
+    "jumlah_orang": 1
+  },
+  {
+    "nama": "Fitriani Yusuf",
+    "email": "fitriani.yusuf@email.com",
+    "no_hp": "081399988877",
+    "tgl_checkin": "2025-08-05",
+    "tgl_checkout": "2025-08-08",
+    "jumlah_kamar": 2,
+    "jumlah_orang": 5
+  },
+  {
+    "nama": "Agus Salim",
+    "email": "agus.salim@email.com",
+    "no_hp": "081344556677",
+    "tgl_checkin": "2025-08-10",
+    "tgl_checkout": "2025-08-12",
+    "jumlah_kamar": 1,
+    "jumlah_orang": 2
+  },
+  {
+    "nama": "Maria Ulfa",
+    "email": "maria.ulfa@email.com",
+    "no_hp": "081366778899",
+    "tgl_checkin": "2025-08-15",
+    "tgl_checkout": "2025-08-18",
+    "jumlah_kamar": 3,
+    "jumlah_orang": 7
+  }
+]

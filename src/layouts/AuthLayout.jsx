@@ -15,14 +15,14 @@ export default function AuthLayout() {
             <MdLocationOn />
           </span>
           <h1 className="text-4xl font-Poppins-Extrabold text-gray-800">
-            Travelie
+            GoTravel
           </h1>
         </div>
 
         <Outlet />
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          © 2025 Travelie Admin Dashboard. All rights reserved.
+          © 2025 GoTravel Admin Dashboard. All rights reserved.
         </p>
       </div>
     </div>

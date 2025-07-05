@@ -1,3 +1,7 @@
+
+import { BsFillInfoCircleFill } from "react-icons/bs"; 
+import { AiFillQuestionCircle } from "react-icons/ai"; 
+import { FcAbout } from "react-icons/fc"; 
 import { MdTour } from "react-icons/md"; 
 import { useState } from "react";
 import { GiTicket } from "react-icons/gi";
@@ -9,10 +13,11 @@ import {
   MdPeopleAlt,
   MdOutlineMessage,
   MdOutlineThumbUp,
-  MdErrorOutline,
+
 } from "react-icons/md";
 import { FaImages, FaMapMarkerAlt, FaServicestack } from "react-icons/fa"; // Tambahkan import untuk ikon FaMapMarkerAlt
 import { Link, NavLink } from "react-router-dom";
+import { IoPeopleCircleSharp } from "react-icons/io5";
 
 export default function Listmenu() {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -76,6 +81,12 @@ export default function Listmenu() {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/faq" className={menuClass}>
+          <AiFillQuestionCircle />
+          <span>FAQ</span>
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/Lowongan" className={menuClass}>
           <CgWorkAlt />
           <span>Lowongan kerja</span>
@@ -85,6 +96,24 @@ export default function Listmenu() {
         <NavLink to="/Tim" className={menuClass}>
           <IoIosPeople />
           <span>Daftar Tim</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/users" className={menuClass}>
+          <IoPeopleCircleSharp />
+          <span>Daftar Pengguna</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/artikel" className={menuClass}>
+          <BsFillInfoCircleFill />
+          <span>Artikel</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/Us" className={menuClass}>
+          <FcAbout/>
+          <span>About Us</span>
         </NavLink>
       </li>
       <li>
@@ -139,6 +168,15 @@ export default function Listmenu() {
               >
                 
                 <span>Tiket Destinasi</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/hotel"
+                className={menuClass}
+                onClick={() => setOpenDropdown(false)}
+              >
+                <span>Tiket Penginapan</span>
               </NavLink>
             </li>
           </ul>

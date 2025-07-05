@@ -18,10 +18,15 @@ const Guides = React.lazy(() => import("./pages/Guides"));
 const Bookings = React.lazy(() => import("./pages/Bookings"));
 const Message = React.lazy(() => import("./pages/Message"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
+const FAQ = React.lazy(() => import("./pages/FAQ"));
 const Lowongan = React.lazy(() => import("./pages/Lowongan"));
 const Tim = React.lazy(() => import("./pages/Tim"));
-const TiketDestinasi = React.lazy(() => import("./pages/TiketDestinasi"));
+const Artikell = React.lazy(() => import("./pages/Artikell"));
+const Users = React.lazy(() => import("./pages/Users"));
+const AboutUs = React.lazy(() => import("./pages/AboutUs"));
+const TiketDestinasii = React.lazy(() => import("./pages/TiketDestinasii"));
 const PesanTiket = React.lazy(() => import("./pages/PesanTiket"));
+const Hotel = React.lazy(() => import("./pages/Hotel"));
 
 const Detailguides = React.lazy(() => import("./pages/Detailguides"));
 const Detailgallery = React.lazy(() => import("./pages/Detailgallery"));
@@ -54,10 +59,15 @@ function App() {
           <Route path="bookings" element={<Bookings />} />
           <Route path="messages" element={<Message />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="faq" element={<FAQ />} />
           <Route path="Lowongan" element={<Lowongan />} />
           <Route path="Tim" element={<Tim />} />
-          <Route path="TiketDestinasi" element={<TiketDestinasi />} />
+          <Route path="artikel" element={<Artikell />} />
+          <Route path="users" element={<Users />} />
+          <Route path="Us" element={<AboutUs />} />
+          <Route path="TiketDestinasi" element={<TiketDestinasii />} />
           <Route path="PesanTiket" element={<PesanTiket />} />
+          <Route path="hotel" element={<Hotel />} />
           {/* <Route path="/orders" element={<Orders />} /> */}
           {/* <Route path="/Gallery" element={<Gallery />} /> */}
           {/* <Route path="/Message" element={<Message />} /> */}

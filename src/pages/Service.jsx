@@ -107,7 +107,7 @@ export default function Service() {
 
   return (
     <div
-      className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2"
+      className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200"
 
     >
       <div className="w-full max-w-3xl">

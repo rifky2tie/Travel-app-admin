@@ -109,7 +109,7 @@ export default function Lowongan() {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-2">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 py-10 px-2">
       <div className="w-full max-w-3xl">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-extrabold text-blue-800 mb-2 drop-shadow">

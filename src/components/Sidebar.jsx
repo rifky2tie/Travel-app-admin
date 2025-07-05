@@ -20,10 +20,19 @@ export default function Sidebar() {
         {/* Menu List */}
         <Listmenu />
 
+        {/* Tombol Login */}
+        <button
+          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg z-50 mx-6 mt-auto mb-2"
+          style={{ minWidth: 120 }}
+          onClick={() => window.location.href = "/loginn"}
+        >
+          Login
+        </button>
+
         {/* Logout Button */}
         <a
           href="https://go-travel3.vercel.app/"
-          className="flex items-center gap-2 text-gray-500 hover:text-red-500 font-medium px-6 py-3 mt-auto mb-6"
+          className="flex items-center gap-2 text-gray-500 hover:text-red-500 font-medium px-6 py-3 mb-6"
         >
           <FiLogOut className="text-xl" />
           <span>Logout</span>

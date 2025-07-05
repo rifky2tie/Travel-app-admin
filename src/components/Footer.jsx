@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-white border-t border-gray-100 text-gray-400 text-sm gap-2">
       <div className="flex items-center gap-2">
         <span>
-          <span className="font-semibold text-gray-500">Copyright © 2024 Peterdraw</span>
+          <span className="font-semibold text-gray-500">Copyright © 2024 </span>
         </span>
         <span className="hidden md:inline mx-2">|</span>
         <a href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</a>
