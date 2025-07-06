@@ -11,9 +11,11 @@ export default function AuthLayout() {
     >
       <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
         <div className="flex items-center justify-center mb-6">
-          <span className="text-blue-500 text-3xl mr-2">
-            <MdLocationOn />
-          </span>
+          <img
+              src="/img/logo.png" 
+              alt="Logo"
+              className="w-8 h-8 object-contain"
+            />
           <h1 className="text-4xl font-Poppins-Extrabold text-gray-800">
             GoTravel
           </h1>

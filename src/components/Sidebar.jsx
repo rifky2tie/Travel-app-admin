@@ -9,9 +9,13 @@ export default function Sidebar() {
       <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
         {/* Logo */}
         <div className="mb-10 flex items-center gap-2 p-6">
-          <span className="text-blue-500 text-xl">
-            <MdLocationOn />
-          </span>
+   
+            <img
+              src="/img/logo.png" // letakkan file logo.png di folder public
+              alt="Logo"
+              className="w-8 h-8 object-contain"
+            />
+     
           <span className="font-Poppins-Medium text-lg text-gray-800">
             GoTravel
           </span>
@@ -24,7 +28,7 @@ export default function Sidebar() {
         <button
           className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg z-50 mx-6 mt-auto mb-2"
           style={{ minWidth: 120 }}
-          onClick={() => window.location.href = "/loginn"}
+          onClick={() => (window.location.href = "/loginn")}
         >
           Login
         </button>
@@ -39,9 +43,7 @@ export default function Sidebar() {
         </a>
       </aside>
       {/* Main Content */}
-      <main className="flex-1 bg-gray-50">
-        {/* ...main content... */}
-      </main>
+      <main className="flex-1 bg-gray-50">{/* ...main content... */}</main>
     </div>
   );
 }
