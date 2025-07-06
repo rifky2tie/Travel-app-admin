@@ -10,7 +10,7 @@ export default function Loginn() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [dataForm, setDataForm] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -29,7 +29,7 @@ export default function Loginn() {
 
     axios
       .post("https://dummyjson.com/user/login", {
-        username: dataForm.email,
+        username: dataForm.username,
         password: dataForm.password,
       })
       .then((response) => {
@@ -78,15 +78,15 @@ export default function Loginn() {
       <form onSubmit={handleSubmit}>
         <div className="mb-5">
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Email Address
+            Username
           </label>
           <input
             type="text"
-            id="email"
-            name="email"
+            id="username"
+            name="username"
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
                             placeholder-gray-400"
-            placeholder="you@example.com"
+            placeholder="Username"
             onChange={handleChange}
           />
         </div>
